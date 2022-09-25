@@ -48,7 +48,7 @@ async def send_logical(message: Message):
     for book in LOGICAL:
         await message.reply_document(document = book)
 
-@dp.message_handler(content_types=ContentType.DOCUMENT, chat_id = USERS)
+@dp.message_handler(content_types=ContentType.DOCUMENT, chat_id = ADMINS)
 async def download(message: Message):
     doc_id = message.document.file_id
     await message.answer(f"ID {doc_id}")
