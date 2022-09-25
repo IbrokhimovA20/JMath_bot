@@ -4,15 +4,6 @@ from gc import callbacks
 from unicodedata import category
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-# class_5 = InlineKeyboardButton(text = '5 класс', callback_data = 'class')
-# class_6 = InlineKeyboardButton(text = '6 класс', callback_data = 'class')
-# class_7 = InlineKeyboardButton(text = '7 класс', callback_data = 'class')
-# class_8 = InlineKeyboardButton(text = '8 класс', callback_data = 'class')
-# class_9 = InlineKeyboardButton(text = '9 класс', callback_data = 'class')
-# class_10 = InlineKeyboardButton(text = '10 класс', callback_data = 'class')
-# class_11 = InlineKeyboardButton(text = '11 класс', callback_data = 'class')
-
-# category_type = InlineKeyboardMarkup().add(class_5,class_6,class_7,class_8,class_9,class_10,class_11)
 
 category_subject = InlineKeyboardMarkup(
     inline_keyboard=[

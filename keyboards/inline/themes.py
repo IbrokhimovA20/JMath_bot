@@ -6,7 +6,6 @@ from unicodedata import category
 from unittest.mock import call
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from keyboards.inline.callback_data import themes_callback
-from telegram import CallbackQuery
 
 from loader import dp
 

@@ -2,7 +2,6 @@ from cgitb import text
 import logging
 from xml.dom.minidom import Document
 from aiogram.dispatcher.filters import Command, Text
-# from aiogram.types import URLInputFile
 from aiogram.types import Message
 
 from aiogram.types import CallbackQuery
