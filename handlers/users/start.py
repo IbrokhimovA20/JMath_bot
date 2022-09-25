@@ -4,7 +4,7 @@ import sqlite3
 from xml.dom.domreg import registered
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
-from data.config import ADMINS
+from data.config import ADMINS,USERS
 from keyboards.default.main_keyboard import menu
 # from aiogram.dispatcher import filters
 from aiogram.types import Message
@@ -30,7 +30,7 @@ async def check_answers(message: Message):
     conn.commit()
     await message.answer('saved')
 
-@dp.message_handler(CommandStart(), chat_id = ADMINS)
+@dp.message_handler(CommandStart(), chat_id = USERS)
 async def bot_start(message: types.Message):
     await message.answer(f"Здравствуйте уважаемый {message.from_user.full_name}, добро пожаловать на бот J.M.ath!", reply_markup=menu)
     

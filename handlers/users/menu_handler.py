@@ -27,7 +27,7 @@ from keyboards.default.russian_books import rus_books
 import sqlite3
 
 from aiogram.types import CallbackQuery
-from data.config import ADMINS
+from data.config import ADMINS,USERS
 
 from loader import dp
 
@@ -38,35 +38,35 @@ from loader import dp
 # for user in users:
 #     registered_users.append(user[1])
 
-@dp.message_handler(content_types=['file'], chat_id = ADMINS)
+@dp.message_handler(content_types=['file'], chat_id = USERS)
 async def see_what(message:Message):
     print(message)
 
 
-@dp.message_handler(text='Логические задания🧠', chat_id = ADMINS)
+@dp.message_handler(text='Логические задания🧠', chat_id = USERS)
 async def send_logical(message: Message):
     for book in LOGICAL:
         await message.reply_document(document = book)
 
-@dp.message_handler(content_types=ContentType.DOCUMENT, chat_id = ADMINS)
+@dp.message_handler(content_types=ContentType.DOCUMENT, chat_id = USERS)
 async def download(message: Message):
     doc_id = message.document.file_id
     await message.answer(f"ID {doc_id}")
 
-@dp.message_handler(text='Библиотека📚', chat_id = ADMINS)
+@dp.message_handler(text='Библиотека📚', chat_id = USERS)
 async def send_libray(message: Message):
     await message.answer("Choose", reply_markup=library_books)
 
-@dp.message_handler(text='📓 Cambridge Assessment', chat_id = ADMINS)
+@dp.message_handler(text='📓 Cambridge Assessment', chat_id = USERS)
 async def send_libray(message: Message):
     for book in CAMBRIDGE:
         await message.reply_document(document = book)
 
-@dp.message_handler(text='🇺🇿 Узбекские книги', chat_id = ADMINS)
+@dp.message_handler(text='🇺🇿 Узбекские книги', chat_id = USERS)
 async def send_logical(message: Message):
     await message.answer("Choose", reply_markup = uzb_books)
 
-@dp.message_handler(text='🇷🇺 Российские книги', chat_id = ADMINS)
+@dp.message_handler(text='🇷🇺 Российские книги', chat_id = USERS)
 async def send_logical(message: Message):
     await message.answer("Choose", reply_markup = rus_books)
 
@@ -82,17 +82,17 @@ async def send_lesson(message: Message):
 async def send_lesson(message: Message):
     await message.answer("Choose",reply_markup=library_books)
 
-@dp.message_handler(text='Темы📝', chat_id = ADMINS)
+@dp.message_handler(text='Темы📝', chat_id = USERS)
 async def select_class(message: Message):
     await message.answer('Выберите предмет: ', reply_markup = category_subject)
 
-@dp.callback_query_handler(text='algebra', chat_id = ADMINS)
+@dp.callback_query_handler(text='algebra', chat_id = USERS)
 async def buy_courses(call: CallbackQuery):
     await call.message.answer('Выберите класс', reply_markup = category_type)
     await call.message.delete()
     await call.answer(cache_time=10)
 
-@dp.callback_query_handler(text='geometry', chat_id = ADMINS)
+@dp.callback_query_handler(text='geometry', chat_id = USERS)
 async def buy_courses(call: CallbackQuery):
     await call.message.answer('Выберите тему', reply_markup = geometriya_themes_1)
     await call.message.delete()

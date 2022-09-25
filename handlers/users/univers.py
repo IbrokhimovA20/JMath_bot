@@ -8,7 +8,7 @@ from keyboards.default.univers_1 import univers_1
 from keyboards.default.univers_2 import univers_2
 from keyboards.default.univers_3 import univers_3
 import sqlite3
-from data.config import ADMINS
+from data.config import USERS
 
 
 from loader import dp
@@ -20,7 +20,7 @@ from loader import dp
 # for user in users:
 #     registered_users.append(user[1])
     
-@dp.message_handler(text='Тесты✅❌', chat_id=ADMINS)
+@dp.message_handler(text='Тесты✅❌', chat_id=USERS)
 async def send_tests(message: Message):
     await message.answer('Выберите ВУЗ', reply_markup=univers_1)
 

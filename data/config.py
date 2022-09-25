@@ -5,6 +5,7 @@ env.read_env()
 
 BOT_TOKEN = env.str("BOT_TOKEN")  # Bot toekn
 ADMINS = env.list("ADMINS")  # adminlar ro'yxati
+USERS = env.list("USERS")
 # IP = env.str("ip")  # Xosting ip manzili
 GUBKIN_BOOKS = env.list("GUBKIN_BOOKS")
 AMITY_BOOKS = env.list("AMITY_BOOKS")
