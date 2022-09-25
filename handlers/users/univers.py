@@ -13,12 +13,12 @@ from data.config import ADMINS
 
 from loader import dp
 
-conn = sqlite3.connect("userlar.db")
-cursor = conn.cursor()
-users = cursor.execute("SELECT * FROM 'users'")
-registered_users = []
-for user in users:
-    registered_users.append(user[1])
+# conn = sqlite3.connect("userlar.db")
+# cursor = conn.cursor()
+# users = cursor.execute("SELECT * FROM 'users'")
+# registered_users = []
+# for user in users:
+#     registered_users.append(user[1])
     
 @dp.message_handler(text='Тесты✅❌', chat_id=ADMINS)
 async def send_tests(message: Message):
