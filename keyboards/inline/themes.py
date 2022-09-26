@@ -1,7 +1,6 @@
 from audioop import add
 from cgitb import text
 from gc import callbacks
-from turtle import back
 from unicodedata import category
 from unittest.mock import call
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
