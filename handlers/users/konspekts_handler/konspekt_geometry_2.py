@@ -15,7 +15,7 @@ from data.config import KONS_PARALLELOGRAM
 
 from aiogram.types import CallbackQuery
 
-from loader import dp
+from loader import dp,bot
 
 @dp.callback_query_handler(lesson_callback.filter(item_name = 'kons_chetirohugolnik'))
 async def buying_corse(call: CallbackQuery, callback_data: dict):
@@ -25,7 +25,7 @@ async def buying_corse(call: CallbackQuery, callback_data: dict):
 @dp.callback_query_handler(lesson_callback.filter(item_name = 'kons_parallelogram'))
 async def buying_corse(call: CallbackQuery, callback_data: dict):
     for book in KONS_PARALLELOGRAM:
-        await message.reply_document(document = book)
+        await bot.send_document(chat_id = call.from_user.id, document = book)
     await call.message.delete()
 
 @dp.callback_query_handler(lesson_callback.filter(item_name = 'kons_romb'))
