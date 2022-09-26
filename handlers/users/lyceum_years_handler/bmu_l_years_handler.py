@@ -1,7 +1,6 @@
 import logging
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message, ReplyKeyboardRemove
-from telegram import CallbackQuery, ReplyMarkup
 from keyboards.inline.callback_data import years_callback
 
 from aiogram.types import CallbackQuery

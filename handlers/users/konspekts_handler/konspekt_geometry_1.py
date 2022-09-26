@@ -2,7 +2,6 @@ from cgitb import text
 import logging
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message, ReplyKeyboardRemove
-from telegram import CallbackQuery, ReplyMarkup
 from keyboards.inline.callback_data import lesson_callback
 from keyboards.inline.konspekts import *
 from keyboards.inline.themes import geometriya_themes_1
