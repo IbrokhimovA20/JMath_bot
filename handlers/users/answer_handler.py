@@ -3,7 +3,6 @@ import logging
 import re
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message, ReplyKeyboardRemove
-from telegram import CallbackQuery, ReplyMarkup
 from aiogram.types import CallbackQuery
 
 from loader import dp
