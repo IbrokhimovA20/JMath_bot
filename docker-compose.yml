@@ -31,3 +31,4 @@ services:
       - TRENAJOR=${TRENAJOR}
       - SBORNIK=${SBORNIK}
       - MEDIC=${MEDIC}
+      - KONS_PARALLELOGRAM=${KONS_PARALLELOGRAM}

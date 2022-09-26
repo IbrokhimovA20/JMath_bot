@@ -11,12 +11,11 @@ from keyboards.inline.callback_data import lesson_callback
 from keyboards.inline.konspekts import *
 from keyboards.inline.themes import geometriya_themes_2
 from loader import bot
+from data.config import KONS_PARALLELOGRAM
 
 from aiogram.types import CallbackQuery
 
 from loader import dp
-
-registered_users = [1521296013,296979322]
 
 @dp.callback_query_handler(lesson_callback.filter(item_name = 'kons_chetirohugolnik'))
 async def buying_corse(call: CallbackQuery, callback_data: dict):
@@ -25,7 +24,8 @@ async def buying_corse(call: CallbackQuery, callback_data: dict):
 
 @dp.callback_query_handler(lesson_callback.filter(item_name = 'kons_parallelogram'))
 async def buying_corse(call: CallbackQuery, callback_data: dict):
-    await bot.send_document(chat_id=call.from_user.id, document=open('/Users/akhrorbek/test_go/python/JMath/handlers/users/konspekts_handler/konspekts/Параллелограмм и его площадь.pdf', 'rb'))
+    for book in KONS_PARALLELOGRAM:
+        await message.reply_document(document = book)
     await call.message.delete()
 
 @dp.callback_query_handler(lesson_callback.filter(item_name = 'kons_romb'))
