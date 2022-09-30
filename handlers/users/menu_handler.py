@@ -42,7 +42,6 @@ from loader import dp
 async def see_what(message:Message):
     print(message)
 
-
 @dp.message_handler(text='Логические задания🧠', chat_id = USERS)
 async def send_logical(message: Message):
     for book in LOGICAL:
