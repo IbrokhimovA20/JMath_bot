@@ -30,3 +30,26 @@ inline_keyboard=[
     ]
 ])
 
+category_classes = InlineKeyboardMarkup(
+inline_keyboard=[
+    [
+        InlineKeyboardButton(text='1 класс', callback_data='1_book'),
+        InlineKeyboardButton(text='2 класс', callback_data='2_book'),
+        InlineKeyboardButton(text='3 класс', callback_data='3_book'),
+        InlineKeyboardButton(text='4 класс', callback_data='4_book'),
+    ],
+    [ 
+        InlineKeyboardButton(text='5 класс', callback_data='5_book'),
+        InlineKeyboardButton(text='6 класс', callback_data='6_book'),
+        InlineKeyboardButton(text='7 класс', callback_data='7_book'),
+    ],
+    [
+        InlineKeyboardButton(text='8 класс', callback_data='8_book'),
+        InlineKeyboardButton(text='9 класс', callback_data='9_book'),
+    ],
+    [
+        InlineKeyboardButton(text='10 класс', callback_data='10_book'),
+        InlineKeyboardButton(text='11 класс', callback_data='11_book')
+    ]
+])
+

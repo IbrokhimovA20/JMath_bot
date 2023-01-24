@@ -3,8 +3,8 @@ import imp
 import logging
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message, ReplyKeyboardRemove
-from data.config import WIUT_L_2015_BOOKS,WIUT_L_2018_BOOKS,WIUT_L_2019_BOOKS,WIUT_L_2021_BOOKS
 from keyboards.inline.callback_data import years_callback
+from handlers.users.all_books import *
 
 from aiogram.types import CallbackQuery
 

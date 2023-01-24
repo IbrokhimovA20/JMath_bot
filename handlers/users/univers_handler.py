@@ -3,16 +3,17 @@ import imp
 from re import U
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message, ReplyKeyboardRemove
-from keyboards.inline.years_univers import years_national
 from keyboards.inline.years_univers import years_wiut
 from keyboards.inline.years_lyceum import years_wiut_l
-from keyboards.inline.years_univers import years_mifi
-from keyboards.inline.years_univers import years_lomonosova
-from keyboards.inline.years_univers import years_plehanova
-from keyboards.inline.years_univers import years_gubkina
 from keyboards.default.univers_keyboards.west_keyboard import west
 from keyboards.default.univers_1 import univers_1
-from data.config import AMITY_BOOKS, GUBKIN_BOOKS, IUT_BOOKS
+from keyboards.default.univers_2 import univers_2
+
+from .all_books import *
+from states.dtm_state import StateDtm
+from keyboards.default.dtm import *
+from aiogram.dispatcher import FSMContext
+
 
 from loader import dp
 from loader import bot
@@ -45,7 +46,8 @@ async def send_lesson(message: Message):
 
 @dp.message_handler(text='РЭУ им. Плеханова')
 async def send_lesson(message: Message):
-    await message.answer("В процессе скоро все дополним ...")
+    for book in PLEHANOVA_BOOKS:
+        await message.reply_document(document=book)
 
 @dp.message_handler(text='Губкина')
 async def send_lesson(message: Message):
@@ -54,15 +56,76 @@ async def send_lesson(message: Message):
 
 @dp.message_handler(text='МГУ им. Ломоносова')
 async def send_lesson(message: Message):
-    await message.answer("В процессе скоро все дополним ...")
+    for book in MGU_BOOKS:
+        await message.reply_document(document=book)
 
 @dp.message_handler(text='МИФИ')
 async def send_lesson(message: Message):
-    await message.answer("В процессе скоро все дополним ...")
+    for book in MIFI_BOOKS:
+        await message.reply_document(document =book)
 
 @dp.message_handler(text='Национальные университеты')
 async def send_lesson(message: Message):
-    await message.answer("В процессе скоро все дополним ...")
+    await message.answer("Выберите язык: ", reply_markup=dtm_language)
+    await StateDtm.language.set()
+
+@dp.message_handler(text='🇷🇺 Русский язык', state=StateDtm.language)
+async def send_lesson(message: Message, state = FSMContext):
+    await message.answer("Выберите год: ", reply_markup=dtm_years)
+    await state.update_data(
+        {"language" : message.text}
+    )
+    await StateDtm.year.set()
+
+
+@dp.message_handler(text='🇺🇿 Узбекский язык', state=StateDtm.language)
+async def send_lesson(message: Message, state = FSMContext):
+    await message.answer("Выберите год: ", reply_markup=dtm_years)
+    await state.update_data(
+        {"language" : message.text}
+    )
+    await StateDtm.year.set()
+
+@dp.message_handler(text='➡️', state=StateDtm.year)
+async def send_lesson(message: Message, state = FSMContext):
+    await message.answer("Выберите ВУЗ",reply_markup=univers_2)
+    await state.reset_state()
+
+@dp.message_handler(text='➡️', state=StateDtm.language)
+async def send_lesson(message: Message, state = FSMContext):
+    await message.answer("Выберите ВУЗ",reply_markup=univers_2)
+    await state.reset_state()
+
+@dp.message_handler(state=StateDtm.year)
+async def send_book(message: Message, state = FSMContext):
+    data = await state.get_data()
+    language = data.get('language')
+    if language == "🇷🇺 Русский язык":
+        if message.text == "2019":
+            for book in dtm_19_rus:
+                await message.reply_document(document = book, reply_markup=univers_2)
+        elif message.text == "2020":
+            for book in dtm_20_rus:
+                await message.reply_document(document = book, reply_markup=univers_2)
+        elif message.text == "2022":
+            for book in dtm_22_rus:
+                await message.reply_document(document = book, reply_markup=univers_2)
+
+    elif language == "🇺🇿 Узбекский язык":
+        if message.text == "2019":
+            for book in dtm_19_uzb:
+                await message.reply_document(document = book, reply_markup=univers_2)
+        elif message.text == "2020":
+            for book in dtm_20_uzb:
+                await message.reply_document(document = book, reply_markup=univers_2)
+        elif message.text == "2022":
+            for book in dtm_22_uzb:
+                await message.reply_document(document = book, reply_markup=univers_2)
+    await state.reset_state()
+
+@dp.message_handler(text='➡️')
+async def send_lesson(message: Message):
+    await message.answer("Выберите ВУЗ",reply_markup=univers_2)
 
 @dp.message_handler(text='back')
 async def go_back_to_unis(message: Message):

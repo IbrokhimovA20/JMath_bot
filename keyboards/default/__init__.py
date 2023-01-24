@@ -5,3 +5,4 @@ from . import univers_3
 from . import library
 from . import uzbek_books
 from . import russian_books
+from . import dtm

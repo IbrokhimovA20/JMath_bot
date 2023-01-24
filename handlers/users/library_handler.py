@@ -3,9 +3,10 @@ import logging
 from xml.dom.minidom import Document
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message
+from .all_books import *
 
-from aiogram.types import CallbackQuery
-from data.config import SBORNIK, SHARIGINA, SKANAVI, TRENAJOR, USMONOV, SCHOOL_BOOKS, MEDIC
+from keyboards.inline.classes import category_classes
+from keyboards.default.library import math_books
 
 from loader import dp
 from loader import bot
@@ -25,6 +26,10 @@ async def send_book(message: Message):
     for book in SCHOOL_BOOKS:
         await message.reply_document(document = book)
 
+@dp.message_handler(text='🎒 Школьный учебники')
+async def send_book(message: Message):
+    await message.answer("Выберите класс: ", reply_markup = category_classes)
+
 @dp.message_handler(text='🇷🇺 Книга Шарыгина')
 async def send_book(message: Message):
     for book in SHARIGINA:
@@ -43,4 +48,33 @@ async def send_book(message: Message):
 @dp.message_handler(text='🎩 М.М.Медицинский')
 async def send_book(message: Message):
     for book in MEDIC:
+        await message.reply_document(document = book)
+
+@dp.message_handler(text='ЕГЭ')
+async def send_book(message: Message):
+    for book in EGE:
+        await message.reply_document(document = book)
+
+@dp.message_handler(text='ОГЭ')
+async def send_book(message: Message):
+    for book in OGE:
+        await message.reply_document(document = book)
+
+@dp.message_handler(text='📝 SAT/GMAT/GRE')
+async def send_book(message: Message):
+    await message.answer("Выберите то что вам нужно: ", reply_markup=math_books)
+
+@dp.message_handler(text='SAT')
+async def send_book(message: Message):
+    for book in SAT_BOOKS:
+        await message.reply_document(document = book)
+
+@dp.message_handler(text='GMAT')
+async def send_book(message: Message):
+    for book in GMAT_BOOKS:
+        await message.reply_document(document = book)
+
+@dp.message_handler(text='GRE')
+async def send_book(message: Message):
+    for book in GRE_BOOKS:
         await message.reply_document(document = book)

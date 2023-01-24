@@ -1,10 +1,8 @@
 from cgitb import text
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import ContentType
-import logging
 from aiogram.dispatcher.filters import Command, Text
-from aiogram.types import Message, ReplyKeyboardRemove
-from data.config import CAMBRIDGE, LOGICAL
+from aiogram.types import Message
 from keyboards.default.main_keyboard import menu
 from keyboards.default.library import library_books
 from keyboards.inline.classes import category_type
@@ -25,6 +23,7 @@ from keyboards.inline.callback_data import themes_callback
 from keyboards.default.uzbek_books import uzb_books
 from keyboards.default.russian_books import rus_books
 from keyboards.inline.follow_button import follow_inline_button
+from .all_books import CAMBRIDGE,LOGICAL
 
 from aiogram.types import CallbackQuery
 from data.config import ADMINS,USERS
