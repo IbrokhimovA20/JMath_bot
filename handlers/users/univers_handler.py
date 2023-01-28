@@ -35,6 +35,11 @@ async def send_lesson(message: Message):
     for book in IUT_BOOKS:
         await message.reply_document(document = book)
 
+@dp.message_handler(text='International House (InterHouse)')
+async def send_lesson(message: Message):
+    for book in INTERHOUSE_BOOKS:
+        await message.reply_document(document = book)
+
 @dp.message_handler(text='Amity')
 async def send_lesson(message: Message):
     for book in AMITY_BOOKS:
