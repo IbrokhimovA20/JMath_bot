@@ -6,7 +6,7 @@ from aiogram.types import Message
 from .all_books import *
 
 from keyboards.inline.classes import category_classes
-from keyboards.default.library import math_books
+from keyboards.default.library import math_books,olimpiada_books
 
 from loader import dp
 from loader import bot
@@ -77,4 +77,18 @@ async def send_book(message: Message):
 @dp.message_handler(text='GRE')
 async def send_book(message: Message):
     for book in GRE_BOOKS:
+        await message.reply_document(document = book)
+
+@dp.message_handler(text='🔖 Олимпиада')
+async def send_book(message: Message):
+    await message.answer("Выберите нужный вам язык: ", reply_markup=olimpiada_books)
+
+@dp.message_handler(text='Узбекский 🇺🇿')
+async def send_book(message: Message):
+    for book in olimpiada_books_uzb:
+        await message.reply_document(document = book)
+
+@dp.message_handler(text='Русский 🇷🇺')
+async def send_book(message: Message):
+    for book in olimpiada_books_rus:
         await message.reply_document(document = book)

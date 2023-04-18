@@ -18,6 +18,10 @@ library_books  = ReplyKeyboardMarkup(
             KeyboardButton(text='📝 SAT/GMAT/GRE')
         ],
         [
+            KeyboardButton(text='🔖 Олимпиада'),
+            KeyboardButton(text='💾 программы')
+        ],
+        [
             KeyboardButton(text='Назад⬆️')
         ]
     ], 
@@ -34,6 +38,24 @@ math_books  = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text='GRE')
+        ],
+        [
+            KeyboardButton(text='Библиотека📚')
+        ]
+    ], 
+resize_keyboard=True
+)
+
+olimpiada_books  = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text='Узбекский 🇺🇿')
+        ],
+        [
+            KeyboardButton(text='Русский 🇷🇺')
+        ],
+        [
+            KeyboardButton(text='Английский 🇬🇧')
         ],
         [
             KeyboardButton(text='Библиотека📚')
