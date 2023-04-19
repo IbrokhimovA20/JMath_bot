@@ -457,10 +457,10 @@ olimpiada_books_uzb = ["BQACAgIAAxkBAAJBhmQ-4bbwCSJEZ8sPEWsyw3k8_XwmAAIBLgAC5tb5
                        "BQACAgIAAxkBAAJBlGQ-4kBov1ZcPCI5DnKfxcbqnfxeAAIHLgAC5tb5SdW2I1ImkvDjLwQ",\
                        "BQACAgIAAxkBAAJBlmQ-4k2io7Iy6lGWCHra8h0FrW-BAAIKLgAC5tb5Sbip59cKuNXZLwQ",\
                        "BQACAgIAAxkBAAJBmGQ-4lyt_ldmq1Hp1FQ721eTPDvxAAIMLgAC5tb5Sd3IuGtTFJopLwQ",\
-                       "BQACAgIAAxkBAAJBmmQ-4nW46fU4NWzwlvY3onyOX6XPAAIOLgAC5tb5SalKpxxB8-8aLwQ"]
+                       "BQACAgIAAxkBAAJBmmQ-4nW46fU4NWzwlvY3onyOX6XPAAIOLgAC5tb5SalKpxxB8-8aLwQ",\
+                       "BQACAgIAAxkBAAJBnmQ-47QOzEaHszOTGARYfmIC5xFMAAIRLgAC5tb5SUGpB9tpy8w6LwQ"]
 
-olimpiada_books_rus = ["BQACAgIAAxkBAAJBnmQ-47QOzEaHszOTGARYfmIC5xFMAAIRLgAC5tb5SUGpB9tpy8w6LwQ",\
-                       "BQACAgIAAxkBAAJBoGQ-48kY4o0mYxcWdE6R0nDtu3mTAAITLgAC5tb5SWtG_EnRWuJqLwQ",\
+olimpiada_books_rus = ["BQACAgIAAxkBAAJBoGQ-48kY4o0mYxcWdE6R0nDtu3mTAAITLgAC5tb5SWtG_EnRWuJqLwQ",\
                        "BQACAgIAAxkBAAJBomQ-4969MRlTqMAPZeLv7rZEJ8D4AAIULgAC5tb5SaJH2jj1vMSqLwQ",\
                        "BQACAgIAAxkBAAJBpGQ-4_dD96sW1SpgMgbnHDmxznUgAAIVLgAC5tb5SSGjFljdJm_VLwQ",\
                        "BQACAgIAAxkBAAJBpmQ-5Ao2JYo0p1O3qzJ4XgjOH_QDAAIWLgAC5tb5ScDib65wFmlqLwQ",\
