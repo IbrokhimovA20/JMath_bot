@@ -372,6 +372,12 @@ parallelogram.insert(InlineKeyboardButton(text='видеоурок', url='https:
 parallelogram.insert(InlineKeyboardButton(text='тесты', callback_data=lesson_callback.new(item_name='test_parallelogram')))
 parallelogram.insert(nazad_geometry_2)
 
+mnogougolnik = InlineKeyboardMarkup(row_width=1)
+mnogougolnik.insert(InlineKeyboardButton(text='конспект', callback_data=lesson_callback.new(item_name='kons_mnogougolnik')))
+mnogougolnik.insert(InlineKeyboardButton(text='видеоурок', url='https://youtu.be/5D8Z74at47o'))
+mnogougolnik.insert(InlineKeyboardButton(text='тесты', callback_data=lesson_callback.new(item_name='test_smnogougolnik')))
+mnogougolnik.insert(nazad_geometry_2)
+
 romb = InlineKeyboardMarkup(row_width=1)
 romb.insert(InlineKeyboardButton(text='конспект', callback_data=lesson_callback.new(item_name='kons_romb')))
 romb.insert(InlineKeyboardButton(text='видеоурок', url='https://youtu.be/5D8Z74at47o'))
@@ -509,14 +515,3 @@ konus_shar.insert(InlineKeyboardButton(text='конспект', callback_data=le
 konus_shar.insert(InlineKeyboardButton(text='видеоурок', url='https://youtu.be/5D8Z74at47o'))
 konus_shar.insert(InlineKeyboardButton(text='тесты', callback_data=lesson_callback.new(item_name='test_konus_shar')))
 konus_shar.insert(nazad_geometry_4)
-
-
-
-
-
-
-
-        
-        
-
-

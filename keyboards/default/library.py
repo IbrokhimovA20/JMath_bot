@@ -63,3 +63,18 @@ olimpiada_books  = ReplyKeyboardMarkup(
     ], 
 resize_keyboard=True
 )
+
+programs  = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text='IOS 🍏')
+        ],
+        [
+            KeyboardButton(text='Android 📱')
+        ],
+        [
+            KeyboardButton(text='Библиотека📚')
+        ]
+    ], 
+resize_keyboard=True
+)

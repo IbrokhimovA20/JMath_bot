@@ -3,10 +3,10 @@ import logging
 from xml.dom.minidom import Document
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message
-from .all_books import *
+from .all_books_programms import *
 
 from keyboards.inline.classes import category_classes
-from keyboards.default.library import math_books,olimpiada_books
+from keyboards.default.library import math_books,olimpiada_books,programs
 
 from loader import dp
 from loader import bot
@@ -92,3 +92,19 @@ async def send_book(message: Message):
 async def send_book(message: Message):
     for book in olimpiada_books_rus:
         await message.reply_document(document = book)
+
+@dp.message_handler(text='💾 программы')
+async def send_book(message: Message):
+    await message.answer("Выберите ваше устройство", reply_markup=programs)
+
+@dp.message_handler(text="Android 📱")
+async def send_android_apps(message: Message):
+    for program in android_links:
+        await message.answer(program)
+    await message.delete()
+
+@dp.message_handler(text="IOS 🍏")
+async def send_android_apps(message: Message):
+    for program in ios_links:
+        await message.answer(program)
+    await message.delete()

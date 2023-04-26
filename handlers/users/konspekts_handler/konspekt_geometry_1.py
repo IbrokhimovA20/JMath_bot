@@ -13,7 +13,7 @@ from loader import dp
 
 @dp.callback_query_handler(lesson_callback.filter(item_name = 'kons_smej_vert_ugli'))
 async def buying_corse(call: CallbackQuery, callback_data: dict):
-    await call.message.answer('В процессе скоро все дополним ...')
+    # await call.message.answer('В процессе скоро все дополним ...')
     await call.message.delete()
 
 @dp.callback_query_handler(lesson_callback.filter(item_name = 'kons_paralel_pramoy'))

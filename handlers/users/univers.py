@@ -19,7 +19,7 @@ def check_sub_channel(chat_member):
     else: 
         return False
     
-@dp.message_handler(text='Тесты✅❌', chat_id=USERS)
+@dp.message_handler(text='Университеты 🎓', chat_id=USERS)
 async def send_tests(message: Message):
     if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
         await message.answer('Выберите ВУЗ', reply_markup=univers_1)

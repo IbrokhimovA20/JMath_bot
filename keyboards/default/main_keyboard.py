@@ -5,11 +5,15 @@ menu  = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text='Темы📝'),
-            KeyboardButton(text='Тесты✅❌'),
+            KeyboardButton(text='Университеты 🎓'),
             KeyboardButton(text='Логические задания🧠'),
         ],
-        [KeyboardButton(text='Библиотека📚')
+        [
+            KeyboardButton(text='Лайфхаки 💯')
         ],
+        [
+            KeyboardButton(text='Библиотека📚')
+        ]
     ], 
 resize_keyboard=True
 

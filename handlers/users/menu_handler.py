@@ -23,7 +23,7 @@ from keyboards.inline.callback_data import themes_callback
 from keyboards.default.uzbek_books import uzb_books
 from keyboards.default.russian_books import rus_books
 from keyboards.inline.follow_button import follow_inline_button
-from .all_books import CAMBRIDGE,LOGICAL
+from .all_books_programms import CAMBRIDGE,LOGICAL
 
 from aiogram.types import CallbackQuery
 from data.config import ADMINS,USERS
@@ -92,6 +92,14 @@ async def send_lesson(message: Message):
 async def select_class(message: Message):
     if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
         await message.answer('Выберите предмет: ', reply_markup = category_subject)
+    else:
+        await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+        await message.delete()
+
+@dp.message_handler(text='Лайфхаки 💯', chat_id = USERS)
+async def select_class(message: Message):
+    if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+        await message.answer('А лайфхаки вы можете увидеть в нашем youtube канале  \n\n\n\n https://www.youtube.com/@jmath4124')
     else:
         await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
         await message.delete()

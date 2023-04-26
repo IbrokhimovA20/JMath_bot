@@ -9,7 +9,7 @@ from keyboards.default.univers_keyboards.west_keyboard import west
 from keyboards.default.univers_1 import univers_1
 from keyboards.default.univers_2 import univers_2
 
-from .all_books import *
+from .all_books_programms import *
 from states.dtm_state import StateDtm
 from keyboards.default.dtm import *
 from aiogram.dispatcher import FSMContext

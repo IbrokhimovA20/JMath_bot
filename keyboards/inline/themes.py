@@ -62,43 +62,32 @@ theme_11 = {'Производная':'proizvodnaya',
     'Метод замены переменных':'metod_zamena_peremenniye',
     'Интегрирование по частям':'integ_po_chastyam'}
 
-geometriya_1 = {'Смежные и вертикальные углы':'smej_vert_ugli',
+geometriya_1 = {'Углы и основные понятия геометрии':'ugli',
     'Параллельные прямые':'paralel_pramoy',
-    'Треугольник':'treugolnik',
-    'Виды треугольников и их свойства':'vidi_treugolnikov',
-    'Синус, косинус, тангенс и котангенс угла':'sin_kos_tan_cotan',
-    'Теорема синусов, теорема косинусов':'teorema_sin_cos',
-    'Биссектриса, медиана, высота':'biss_mediana_visota',
-    'Площадь треугольника':'ploshad_treugolnikov',
-    'Подобие треугольников':'podobiye_treugolnikov'}
+    'Треугольники общие понятия':'treugolnik',
+    'Виды треугольников,прямоугольный' : 'vidi_treugolnikov',
+    'Треугольники Теорема синусов,косинусов Р б и Р н треугольники':'sin_kos_tan_cotan',
+    'Высота, биссектрисы и медиана треугольника':'biss_mediana_visota'}
 
-geometriya_2 = {'Четырёхугольник':'chetirohugolnik',
-        'Параллелограмм':'parallelogram',
-        'Ромб':'romb',
-        'Прямоугольник':'pryamougolnik',
-        'Квадрат':'kvadrat',
-        'Окружность и круг':'okrujnost_krug',
-        'Сектор и сегмент':'sektor_segment',
-        'Уравнение окружности':'urav_okrujnosti',
-        'Треугольник и окружность':'treugol_okrujnost'}
+geometriya_2 = {'Площадь треугольника':'ploshad_treugolnikov',
+    'Подобие треугольников и средняя линия':'podobiye_treugolnikov',
+    '4_угольники,квадрат,прямоугольник':'kvadrat',
+    'Ромб и параллелограмм':'parallelogram',
+    'Трапеция':'trapetsiya',
+    'Многоугольники':'mnogougolnik'}
 
-geometriya_3 = {'Четырёхугольник и окружность':'chetiryoh_okrujnost',
-       'Многоугольник и окружность':'mnogougol_okrujnost',
-        'Векторы':'vektori',
-        'Многогранники':'mnogogranniki',
-        'Призма':'prizma',
-        'Трапеция':'trapetsiya',
-        'Параллелепипед':'paralepiped',
-        'Куб':'kub'}
+geometriya_3 = {'Окружность и круг':'okrujnost_krug',
+        'Площадь, длина и уравнение окружности':'ploshad',
+        'Окружность + треугольник':'okrujnost_treugolnik',
+        'Окружность + 4-угольник':'okrujnost_chugolnik',
+        'Система координат и векторы':'sistema_koordinat',
+        'Призма':'prizma'}
     
 geometriya_4 = {'Пирамида':'piramida',
-        'Цилиндр':'silindr',
-        'Конус':'konus',
-        'Шар и сфера':'shar_sfera',
-        'Призма и шар':'prizma_shar',
-        'Пирамида и шар':'piramida_shar',
-        'Цилиндр и шар':'silindr_shar',
-        'Конус и шар':'konus_shar'}
+    'Цилиндр':'silindr',
+       'Конус':'konus',
+        'Шар и Сфера':'shar_sfera',
+        'Комбинация тел':'kombinasiya'}
 
 nazad = InlineKeyboardButton(text='назад', callback_data='nazad_v_klass')
 

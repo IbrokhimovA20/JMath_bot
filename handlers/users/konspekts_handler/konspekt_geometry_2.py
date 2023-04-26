@@ -11,7 +11,7 @@ from keyboards.inline.callback_data import lesson_callback
 from keyboards.inline.konspekts import *
 from keyboards.inline.themes import geometriya_themes_2
 from loader import bot
-from handlers.users.all_books import KONS_PARALLELOGRAM 
+from handlers.users.all_books_programms import KONS_PARALLELOGRAM 
 
 from aiogram.types import CallbackQuery
 

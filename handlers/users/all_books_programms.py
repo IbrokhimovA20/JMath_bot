@@ -466,3 +466,15 @@ olimpiada_books_rus = ["BQACAgIAAxkBAAJBoGQ-48kY4o0mYxcWdE6R0nDtu3mTAAITLgAC5tb5
                        "BQACAgIAAxkBAAJBpmQ-5Ao2JYo0p1O3qzJ4XgjOH_QDAAIWLgAC5tb5ScDib65wFmlqLwQ",\
                        "BQACAgIAAxkBAAJBqGQ-5B1qwqNi6k7d7mUgTxqjsbVYAAIXLgAC5tb5SbpF7ShnBbk1LwQ",\
                        "BQACAgIAAxkBAAJBqmQ-5CnRaDyDHT7ONwdSOjlFtkQmAAIYLgAC5tb5SdD_Q3cEYEwwLwQ"]
+
+android_links = ["https://play.google.com/store/apps/details?id=com.malmath.apps.mm",\
+                "https://play.google.com/store/apps/details?id=us.mathlab.android",\
+                "https://play.google.com/store/apps/details?id=com.highermathematics.linearalgebra.free",\
+                "https://play.google.com/store/apps/details?id=com.socrative.student",\
+                "https://play.google.com/store/apps/details?id=all.in.one.calculator"]
+
+ios_links = ["https://apps.apple.com/uz/app/socrative-student/id477618130",\
+                "https://apps.apple.com/uz/app/quick-graph/id292412367",\
+                "https://apps.apple.com/uz/app/matrix-calculator-algebra/id1627052139",\
+                "https://apps.apple.com/uz/app/microsoft-maths-solver-hw-app/id1483962204",\
+                "https://apps.apple.com/uz/app/math-riddles-iq-test-trivia/id1471344150"]
