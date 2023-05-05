@@ -54,7 +54,6 @@ async def chech_following(call: CallbackQuery, callback_data: dict):
 
 @dp.message_handler(text='jmath', chat_id = ADMINS)
 async def check_answers(message: Message):
-    print(message.from_user.id, type(message.from_user.id))
     await bot.send_message(chat_id=message.from_user.id, text = "Введите текст который хотели бы отправить всем пользователям")
     await message.delete()
     await userState.message_state.set()
@@ -64,9 +63,8 @@ async def check_answers(message: Message):
 async def check_answers(message: Message, state:FSMContext):
     text = message.text
     for user in USERS:
-        print(user, type(user))
         try:
-            await bot.send_message(chat_id=user, text = text)
+            await bot.send_message(chat_id=int(user), text = text)
         except:
             continue
     await message.delete()
