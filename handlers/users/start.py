@@ -63,7 +63,10 @@ async def check_answers(message: Message):
 async def check_answers(message: Message, state:FSMContext):
     text = message.text
     for user in USERS:
-        await bot.send_message(chat_id=user, text = text)
+        try:
+            await bot.send_message(chat_id=user, text = text)
+        except:
+            continue
     await message.delete()
     await state.reset_state()
 
