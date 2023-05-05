@@ -4,13 +4,15 @@ import sqlite3
 from xml.dom.domreg import registered
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
-from data.config import USERS
+from data.config import USERS,ADMINS
 from keyboards.default.main_keyboard import menu
 from keyboards.inline.follow_button import follow_inline_button
 from aiogram.types import Message
 from keyboards.inline.callback_data import follow_callback
 from aiogram.types import CallbackQuery
 from data.config import CHANNEL_ID_1, CHANNEL_ID_2
+from states.dtm_state import userState
+from aiogram.dispatcher import FSMContext
 
 from loader import dp, bot
 
@@ -50,6 +52,18 @@ async def chech_following(call: CallbackQuery, callback_data: dict):
         await bot.send_message(chat_id = call.from_user.id,text = f"Здравствуйте уважаемый {call.from_user.full_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
         await call.message.delete()
 
+@dp.message_handler(text='jmath', chat_id = ADMINS)
+async def check_answers(message: Message):
+    await bot.send_message(chat_id=message.from_user.id, text = "Введите текст который хотели бы отправить всем пользователям")
+    await message.delete()
+    await userState.message_state.set()
 
 
-    
+@dp.message_handler(state=userState.message_state, chat_id = ADMINS)
+async def check_answers(message: Message, state:FSMContext):
+    text = message.text
+    for user in USERS:
+        await bot.send_message(chat_id=user, text = text)
+    await message.delete()
+    await state.reset_state()
+
