@@ -24,7 +24,7 @@ async def buying_corse(call: CallbackQuery, callback_data: dict):
 
 @dp.callback_query_handler(themes_callback.filter(item_name = 'okrujnost_treugolnik'))
 async def buying_corse(call: CallbackQuery, callback_data: dict):
-    await bot.send_document(chat_id=call.from_user.id, document="BQACAgIAAxkBAAJDfmRJWa7ILLbbzLGD1xwwpP1k8MQbAAKsLwACQdJJSkQuNrXbW9fTLw")
+    await bot.send_document(chat_id=call.from_user.id, document="BQACAgIAAxkBAAJDfmRJWa7ILLbbzLGD1xwwpP1k8MQbAAKsLwACQdJJSkQuNrXbW9fTLwQ")
     # await call.message.answer('Выберите что вам нужно', reply_markup=vektori)
     await call.message.delete()
 
