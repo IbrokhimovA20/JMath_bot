@@ -20,11 +20,11 @@ from loader import bot
 
 @dp.message_handler(text='WIUT')
 async def send_lesson(message: Message):
-    await message.answer("Choose",reply_markup=west)
-
-@dp.message_handler(text='WIUT exam samples')
-async def send_lesson(message: Message):
     await message.answer("Выберите год",reply_markup=years_wiut)
+
+# @dp.message_handler(text='WIUT exam samples')
+# async def send_lesson(message: Message):
+#     await message.answer("Выберите год",reply_markup=years_wiut)
 
 @dp.message_handler(text='WIUT Lyceum exam samples')
 async def send_lesson(message: Message):
@@ -135,6 +135,6 @@ async def send_book(message: Message, state = FSMContext):
 async def send_lesson(message: Message):
     await message.answer("Выберите ВУЗ",reply_markup=univers_2)
 
-@dp.message_handler(text='back')
-async def go_back_to_unis(message: Message):
-    await message.answer('Выберите ВУЗ', reply_markup=univers_1)
+# @dp.message_handler(text='back')
+# async def go_back_to_unis(message: Message):
+#     await message.answer('Выберите ВУЗ', reply_markup=univers_1)
