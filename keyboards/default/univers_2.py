@@ -5,9 +5,12 @@ univers_2  = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text='Amity'),
-            KeyboardButton(text='BMU'),
-            KeyboardButton(text='Национальные университеты'),
+            KeyboardButton(text='BMU')
         ],
+        [
+            KeyboardButton(text='Акфа'),
+            KeyboardButton(text='Турин')
+        ]
         [
          KeyboardButton(text='⬅️'),   
         ]

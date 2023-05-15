@@ -9,7 +9,7 @@ univers_1  = ReplyKeyboardMarkup(
             KeyboardButton(text='Российские ВУЗы')
         ],
         [
-            KeyboardButton(text="International House (InterHouse)")
+            KeyboardButton(text='Национальные университеты')
         ],
         [
          KeyboardButton(text='назад'),

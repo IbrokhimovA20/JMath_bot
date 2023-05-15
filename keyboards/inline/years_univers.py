@@ -24,7 +24,8 @@ year_gubkina = {'2017' : 'gubkina_2017',
             '2018' : 'gubkina_2018',
             '2019' : 'gubkina_2019',
             '2020' : 'gubkina_2020',
-            '2021' : 'gubkina_2021'} 
+            '2021' : 'gubkina_2021',
+            '2022' : 'gubkina_2022'} 
 
 year_plehanova = {'2019' : 'plehanova_2019',
             '2020' : 'plehanova_2020',

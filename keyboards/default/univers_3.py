@@ -8,6 +8,8 @@ univers_3  = ReplyKeyboardMarkup(
             KeyboardButton(text='Губкина'),
             KeyboardButton(text='МГУ им. Ломоносова'),
             KeyboardButton(text='МИФИ'), 
+            KeyboardButton(text='МГИМО')
+
         ],
         [
          KeyboardButton(text='⬅️'),   

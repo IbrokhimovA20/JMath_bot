@@ -9,7 +9,8 @@ menu  = ReplyKeyboardMarkup(
             KeyboardButton(text='Логические задания🧠'),
         ],
         [
-            KeyboardButton(text='Лайфхаки 💯')
+            KeyboardButton(text='Лайфхаки 💯'),
+            KeyboardButton(text='Лицеи 🎒')
         ],
         [
             KeyboardButton(text='Библиотека📚')

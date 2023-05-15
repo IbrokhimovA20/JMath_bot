@@ -3,7 +3,7 @@ import imp
 from re import U
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message, ReplyKeyboardRemove
-from keyboards.inline.years_univers import years_wiut
+from keyboards.inline.years_univers import years_wiut,year_gubkina
 from keyboards.inline.years_lyceum import years_wiut_l
 from keyboards.default.univers_keyboards.west_keyboard import west
 from keyboards.default.univers_1 import univers_1
@@ -56,8 +56,7 @@ async def send_lesson(message: Message):
 
 @dp.message_handler(text='Губкина')
 async def send_lesson(message: Message):
-    for book in GUBKIN_BOOKS:
-        await message.reply_document(document=book)
+    await bot.send_message(chat_id=message.from_user.id, text="Выберите год",reply_markup=year_gubkina)
 
 @dp.message_handler(text='МГУ им. Ломоносова')
 async def send_lesson(message: Message):

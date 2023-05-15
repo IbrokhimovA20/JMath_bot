@@ -6,3 +6,4 @@ from . import library
 from . import uzbek_books
 from . import russian_books
 from . import dtm
+from . import lyceums
