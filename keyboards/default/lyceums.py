@@ -9,6 +9,9 @@ lyceum  = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text="International House (InterHouse)")
+        ],
+        [
+            KeyboardButton(text="назад")
         ]
     ], 
 resize_keyboard=True

@@ -3,7 +3,7 @@ import imp
 from re import U
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message, ReplyKeyboardRemove
-from keyboards.inline.years_univers import years_wiut,year_gubkina
+from keyboards.inline.years_univers import years_wiut,years_gubkina,years_iut
 from keyboards.inline.years_lyceum import years_wiut_l
 from keyboards.default.univers_keyboards.west_keyboard import west
 from keyboards.default.univers_1 import univers_1
@@ -32,12 +32,16 @@ async def send_lesson(message: Message):
 
 @dp.message_handler(text='IUT')
 async def send_lesson(message: Message):
-    for book in IUT_BOOKS:
-        await message.reply_document(document = book)
+    await message.answer("Выберите год",reply_markup=years_iut)
 
 @dp.message_handler(text='International House (InterHouse)')
 async def send_lesson(message: Message):
     for book in INTERHOUSE_BOOKS:
+        await message.reply_document(document = book)
+    
+@dp.message_handler(text='Лицей И.М. Губкина')
+async def send_lesson(message: Message):
+    for book in GUBKIN_LITSEY:
         await message.reply_document(document = book)
 
 @dp.message_handler(text='Amity')
@@ -56,7 +60,7 @@ async def send_lesson(message: Message):
 
 @dp.message_handler(text='Губкина')
 async def send_lesson(message: Message):
-    await bot.send_message(chat_id=message.from_user.id, text="Выберите год",reply_markup=year_gubkina)
+    await bot.send_message(chat_id=message.from_user.id, text="Выберите год",reply_markup=years_gubkina)
 
 @dp.message_handler(text='МГУ им. Ломоносова')
 async def send_lesson(message: Message):
@@ -107,24 +111,24 @@ async def send_book(message: Message, state = FSMContext):
     if language == "🇷🇺 Русский язык":
         if message.text == "2019":
             for book in dtm_19_rus:
-                await message.reply_document(document = book, reply_markup=univers_2)
+                await message.reply_document(document = book, reply_markup=univers_1)
         elif message.text == "2020":
             for book in dtm_20_rus:
-                await message.reply_document(document = book, reply_markup=univers_2)
+                await message.reply_document(document = book, reply_markup=univers_1)
         elif message.text == "2022":
             for book in dtm_22_rus:
-                await message.reply_document(document = book, reply_markup=univers_2)
+                await message.reply_document(document = book, reply_markup=univers_1)
 
     elif language == "🇺🇿 Узбекский язык":
         if message.text == "2019":
             for book in dtm_19_uzb:
-                await message.reply_document(document = book, reply_markup=univers_2)
+                await message.reply_document(document = book, reply_markup=univers_1)
         elif message.text == "2020":
             for book in dtm_20_uzb:
-                await message.reply_document(document = book, reply_markup=univers_2)
+                await message.reply_document(document = book, reply_markup=univers_1)
         elif message.text == "2022":
             for book in dtm_22_uzb:
-                await message.reply_document(document = book, reply_markup=univers_2)
+                await message.reply_document(document = book, reply_markup=univers_1)
     await state.reset_state()
 
 @dp.message_handler(text='➡️')

@@ -10,7 +10,7 @@ univers_2  = ReplyKeyboardMarkup(
         [
             KeyboardButton(text='Акфа'),
             KeyboardButton(text='Турин')
-        ]
+        ],
         [
          KeyboardButton(text='⬅️'),   
         ]
