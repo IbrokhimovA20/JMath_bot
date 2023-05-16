@@ -65,12 +65,27 @@ async def send_lesson(message: Message):
 @dp.message_handler(text='МГУ им. Ломоносова')
 async def send_lesson(message: Message):
     for book in MGU_BOOKS:
-        await message.reply_document(document=book)
+        await message.reply_document(document = book)
 
 @dp.message_handler(text='МИФИ')
 async def send_lesson(message: Message):
     for book in MIFI_BOOKS:
-        await message.reply_document(document =book)
+        await message.reply_document(document = book)
+
+@dp.message_handler(text='МГИМО')
+async def send_lesson(message: Message):
+    for book in MGIMO_BOOKS:
+        await message.reply_document(document = book)
+
+@dp.message_handler(text='Акфа')
+async def send_lesson(message: Message):
+    for book in AKFA_BOOKS:
+        await message.reply_document(document = book)
+
+@dp.message_handler(text='Турин')
+async def send_lesson(message: Message):
+    for book in TURIN_BOOKS:
+        await message.reply_document(document = book)
 
 @dp.message_handler(text='Национальные университеты')
 async def send_lesson(message: Message):
