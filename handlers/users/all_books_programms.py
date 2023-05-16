@@ -45,7 +45,7 @@ TURIN_BOOKS = ["BQACAgIAAxkBAAJbI2RigN3t6aP7PHk58AnA29Yyl7yGAAJpLwACNzYZS3bxSeQf
                 "BQACAgIAAxkBAAJbKmRigPI9zlLx2hOrpla4F5fk_B_HAAJrLwACNzYZS1_udl2UdhVOLwQ",
                 "BQACAgIAAxkBAAJbLmRigSzk6gtfUJMzgq1iJWgx3hxtAAJtLwACNzYZS7Ilep7zvJbKLwQ", \
                 "BQACAgIAAxkBAAJbMmRigWYetIFaywABmOSFeJ9NNmH6aQACcC8AAjc2GUuyXmJ6SGjDQS8E", \
-                "ID BQACAgIAAxkBAAJbNGRigWf_g4Sf7XQ7OoqU89aF1re5AAJxLwACNzYZS-Ochv65PsaBLwQ", \
+                "BQACAgIAAxkBAAJbNGRigWf_g4Sf7XQ7OoqU89aF1re5AAJxLwACNzYZS-Ochv65PsaBLwQ", \
                 "BQACAgIAAxkBAAJbNmRigW5grTNRoNVGiUDNWSdX9fVzAAJyLwACNzYZS2JQicj8U35KLwQ", \
                 "BQACAgIAAxkBAAJbOmRigat8ptzF96ijWZeuYDmeiiWtAAJ2LwACNzYZS7hEatZ8O6GzLwQ", \
                 "BQACAgIAAxkBAAJbPGRiga8uJWAk25TSymto3VSIFsfbAAJ3LwACNzYZS34Z_iE9_Up6LwQ", \
