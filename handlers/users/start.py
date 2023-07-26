@@ -46,7 +46,7 @@ def check_google_sheet(user_id):
     url = f"https://docs.google.com/spreadsheets/d/{MAIN_SHEET_ID}/export?format=csv"
     df = pd.read_csv(url, index_col=[0])
     print(df)
-
+    print(df.columns)
 
 
 @dp.message_handler(CommandStart(), chat_id = USERS, state='*')
