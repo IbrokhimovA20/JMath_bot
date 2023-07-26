@@ -45,8 +45,11 @@ def check_google_sheet(user_id):
     gc = gd.authorize(credentials)
     url = f"https://docs.google.com/spreadsheets/d/{MAIN_SHEET_ID}/export?format=csv"
     df = pd.read_csv(url, index_col=[0])
-    print(df)
-    print(df.columns)
+    print(list(df["id"]))
+    if user_id in list(df["id"]):
+        print("True")
+    else:
+        print(list(df["id"])[0], type(list(df["id"])[0]))
 
 
 @dp.message_handler(CommandStart(), chat_id = USERS, state='*')
