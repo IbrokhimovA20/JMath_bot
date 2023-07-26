@@ -58,140 +58,167 @@ async def download(message: Message):
     doc_id = message.document.file_id
     await message.answer(f"ID {doc_id}")
 
-@dp.message_handler(text='Библиотека📚', chat_id = USERS)
+@dp.message_handler(text='Библиотека📚')
 async def send_libray(message: Message):
-    if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
-        await message.answer("Choose", reply_markup=library_books)
-    else:
-        await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
-        await message.delete()
+    if check_google_sheet(message.chat.id):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+            await message.answer("Choose", reply_markup=library_books)
+        else:
+            await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+            await message.delete()
 
-@dp.message_handler(text='📓 Cambridge Assessment', chat_id = USERS)
+@dp.message_handler(text='📓 Cambridge Assessment')
 async def send_libray(message: Message):
-    for book in CAMBRIDGE:
-        await message.reply_document(document = book)
+    if check_google_sheet(message.chat.id):
+        for book in CAMBRIDGE:
+            await message.reply_document(document = book)
 
-@dp.message_handler(text='🇺🇿 Узбекские книги', chat_id = USERS)
+@dp.message_handler(text='🇺🇿 Узбекские книги')
 async def send_logical(message: Message):
-    await message.answer("Choose", reply_markup = uzb_books)
+    if check_google_sheet(message.chat.id):
+        await message.answer("Choose", reply_markup = uzb_books)
 
-@dp.message_handler(text='🇷🇺 Российские книги', chat_id = USERS)
+@dp.message_handler(text='🇷🇺 Российские книги')
 async def send_logical(message: Message):
-    await message.answer("Choose", reply_markup = rus_books)
+    if check_google_sheet(message.chat.id):
+        await message.answer("Choose", reply_markup = rus_books)
 
 @dp.message_handler(text='назад')
 async def send_lesson(message: Message):
-    await message.answer("Choose",reply_markup=menu)
+    if check_google_sheet(message.chat.id):
+        await message.answer("Choose",reply_markup=menu)
 
 @dp.message_handler(text='Назад⬆️')
 async def send_lesson(message: Message):
-    await message.answer("Choose",reply_markup=menu)
+    if check_google_sheet(message.chat.id):
+        await message.answer("Choose",reply_markup=menu)
 
 @dp.message_handler(text='Назад ⬆️')
 async def send_lesson(message: Message):
-    await message.answer("Choose",reply_markup=library_books)
+    if check_google_sheet(message.chat.id):
+        await message.answer("Choose",reply_markup=library_books)
 
-@dp.message_handler(text='Темы📝', chat_id = USERS)
+@dp.message_handler(text='Темы📝')
 async def select_class(message: Message):
-    if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
-        await message.answer('Выберите предмет: ', reply_markup = category_subject)
-    else:
-        await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
-        await message.delete()
+    if check_google_sheet(message.chat.id):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+            await message.answer('Выберите предмет: ', reply_markup = category_subject)
+        else:
+            await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+            await message.delete()
 
-@dp.message_handler(text='Лайфхаки 💯', chat_id = USERS)
+@dp.message_handler(text='Лайфхаки 💯')
 async def select_class(message: Message):
-    if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
-        await message.answer('А лайфхаки вы можете увидеть в нашем youtube канале  \n\n\n\n https://www.youtube.com/@jmath4124')
-    else:
-        await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
-        await message.delete()
+    if check_google_sheet(message.chat.id):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+            await message.answer('А лайфхаки вы можете увидеть в нашем youtube канале  \n\n\n\n https://www.youtube.com/@jmath4124')
+        else:
+            await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+            await message.delete()
 
-@dp.message_handler(text='Лицеи 🎒', chat_id = USERS)
+@dp.message_handler(text='Лицеи 🎒')
 async def select_class(message: Message):
-    if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
-        await message.answer('Выберите лицей: ', reply_markup = lyceum)
-    else:
-        await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
-        await message.delete()
+    if check_google_sheet(message.chat.id):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+            await message.answer('Выберите лицей: ', reply_markup = lyceum)
+        else:
+            await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+            await message.delete()
 
-@dp.callback_query_handler(text='algebra', chat_id = USERS)
+@dp.callback_query_handler(text='algebra')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите класс', reply_markup = category_type)
-    await call.message.delete()
-    await call.answer(cache_time=10)
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите класс', reply_markup = category_type)
+        await call.message.delete()
+        await call.answer(cache_time=10)
 
-@dp.callback_query_handler(text='geometry', chat_id = USERS)
+@dp.callback_query_handler(text='geometry')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите тему', reply_markup = geometriya_themes_1)
-    await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите тему', reply_markup = geometriya_themes_1)
+        await call.message.delete()
 
 @dp.callback_query_handler(themes_callback.filter(item_name='next_1'))
 async def buy_courses(call: CallbackQuery, callback_data : dict):
-    await call.message.edit_reply_markup(reply_markup=geometriya_themes_2)
+    if check_google_sheet(call.from_user.id):
+        await call.message.edit_reply_markup(reply_markup=geometriya_themes_2)
 
 @dp.callback_query_handler(themes_callback.filter(item_name='next_2'))
 async def buy_courses(call: CallbackQuery, callback_data: dict):
-    await call.message.edit_reply_markup(reply_markup=geometriya_themes_3)
+    if check_google_sheet(call.from_user.id):
+        await call.message.edit_reply_markup(reply_markup=geometriya_themes_3)
 
 @dp.callback_query_handler(themes_callback.filter(item_name='next_3'))
 async def buy_courses(call: CallbackQuery, callback_data: dict):
-    await call.message.edit_reply_markup(reply_markup=geometriya_themes_4)
+    if check_google_sheet(call.from_user.id):
+        await call.message.edit_reply_markup(reply_markup=geometriya_themes_4)
 
 @dp.callback_query_handler(themes_callback.filter(item_name='prev_1'))
 async def buy_courses(call: CallbackQuery, callback_data: dict):
-    await call.message.edit_reply_markup(reply_markup=geometriya_themes_1)
+    if check_google_sheet(call.from_user.id):
+        await call.message.edit_reply_markup(reply_markup=geometriya_themes_1)
     
 
 @dp.callback_query_handler(themes_callback.filter(item_name='prev_2'))
 async def buy_courses(call: CallbackQuery, callback_data: dict):
-    await call.message.edit_reply_markup(reply_markup=geometriya_themes_2)
+    if check_google_sheet(call.from_user.id):
+        await call.message.edit_reply_markup(reply_markup=geometriya_themes_2)
 
 @dp.callback_query_handler(themes_callback.filter(item_name='prev_3'))
 async def buy_courses(call: CallbackQuery, callback_data: dict):
-    await call.message.edit_reply_markup(reply_markup=geometriya_themes_3)
+    if check_google_sheet(call.from_user.id):
+        await call.message.edit_reply_markup(reply_markup=geometriya_themes_3)
 
 @dp.callback_query_handler(text='5_class')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите тему', reply_markup = themes_5)
-    await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите тему', reply_markup = themes_5)
+        await call.message.delete()
 
 @dp.callback_query_handler(text='6_class')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите тему', reply_markup = themes_6)
-    await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите тему', reply_markup = themes_6)
+        await call.message.delete()
 
 @dp.callback_query_handler(text='7_class')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите тему', reply_markup = themes_7)
-    await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите тему', reply_markup = themes_7)
+        await call.message.delete()
 
 @dp.callback_query_handler(text='8_class')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите тему', reply_markup = themes_8)
-    await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите тему', reply_markup = themes_8)
+        await call.message.delete()
 
 @dp.callback_query_handler(text='9_class')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите тему', reply_markup = themes_9)
-    await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите тему', reply_markup = themes_9)
+        await call.message.delete()
 
 @dp.callback_query_handler(text='10_class')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите тему', reply_markup = themes_10)
-    await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите тему', reply_markup = themes_10)
+        await call.message.delete()
 
 @dp.callback_query_handler(text='11_class')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите тему', reply_markup = themes_11)
-    await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите тему', reply_markup = themes_11)
+        await call.message.delete()
 
 @dp.callback_query_handler(text='nazad_v_klass')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите тему', reply_markup = category_type)
-    await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите тему', reply_markup = category_type)
+        await call.message.delete()
 
 @dp.callback_query_handler(text='nazad_years')
 async def buy_courses(call: CallbackQuery):
-    await call.message.answer('Выберите ВУЗ', reply_markup = univers_1)
-    await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        await call.message.answer('Выберите ВУЗ', reply_markup = univers_1)
+        await call.message.delete()
