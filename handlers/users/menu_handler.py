@@ -29,6 +29,7 @@ from .all_books_programms import CAMBRIDGE,LOGICAL
 from aiogram.types import CallbackQuery
 from data.config import ADMINS,USERS
 from data.config import CHANNEL_ID_1, CHANNEL_ID_2
+from handlers.users.start import check_google_sheet
 
 from loader import dp, bot
 
@@ -38,18 +39,19 @@ def check_sub_channel(chat_member):
     else: 
         return False
 
-@dp.message_handler(content_types=['file'], chat_id = USERS)
+@dp.message_handler(content_types=['file'], chat_id = ADMINS)
 async def see_what(message:Message):
     print(message)
 
-@dp.message_handler(text='Логические задания🧠', chat_id = USERS)
+@dp.message_handler(text='Логические задания🧠')
 async def send_logical(message: Message):
-    if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
-        for book in LOGICAL:
-            await message.reply_document(document = book)
-    else:
-        await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
-        await message.delete()
+    if check_google_sheet(message.chat.id):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+            for book in LOGICAL:
+                await message.reply_document(document = book)
+        else:
+            await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+            await message.delete()
 
 @dp.message_handler(content_types=ContentType.DOCUMENT, chat_id = ADMINS)
 async def download(message: Message):

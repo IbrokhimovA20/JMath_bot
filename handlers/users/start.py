@@ -45,32 +45,32 @@ def check_google_sheet(user_id):
     gc = gd.authorize(credentials)
     url = f"https://docs.google.com/spreadsheets/d/{MAIN_SHEET_ID}/export?format=csv"
     df = pd.read_csv(url, index_col=[0])
-    print(list(df["id"]))
     if user_id in list(df["id"]):
-        print("True")
+        return True
     else:
-        print(list(df["id"])[0], type(list(df["id"])[0]))
+        return False
 
 
-@dp.message_handler(CommandStart(), chat_id = USERS, state='*')
+@dp.message_handler(CommandStart(), state='*')
 async def bot_start(message: types.Message, state:FSMContext):
-    check_google_sheet(message.chat.id)
-    if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
-        await bot.send_message(chat_id = message.chat.id, text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! приятного пользования", reply_markup=menu)
-        await message.delete()
-        await state.reset_state()
-    else:
-        await message.answer(f"Здравствуйте уважаемый {message.from_user.full_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
-        await state.reset_state()
+    if check_google_sheet(message.chat.id):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+            await bot.send_message(chat_id = message.chat.id, text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! приятного пользования", reply_markup=menu)
+            await message.delete()
+            await state.reset_state()
+        else:
+            await message.answer(f"Здравствуйте уважаемый {message.from_user.full_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+            await state.reset_state()
 
-@dp.callback_query_handler(follow_callback.filter(item_name = 'followed'), chat_id = USERS)
+@dp.callback_query_handler(follow_callback.filter(item_name = 'followed'))
 async def chech_following(call: CallbackQuery, callback_data: dict):
-    if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = call.from_user.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = call.from_user.id)):
-        await bot.send_message(chat_id = call.from_user.id, text = f"Здравствуйте уважаемый {call.from_user.full_name}, добро пожаловать на бот J.M.ath! приятного пользования", reply_markup=menu)
-        await call.message.delete()
-    else:
-        await bot.send_message(chat_id = call.from_user.id,text = f"Здравствуйте уважаемый {call.from_user.full_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
-        await call.message.delete()
+    if check_google_sheet(call.from_user.id):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = call.from_user.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = call.from_user.id)):
+            await bot.send_message(chat_id = call.from_user.id, text = f"Здравствуйте уважаемый {call.from_user.full_name}, добро пожаловать на бот J.M.ath! приятного пользования", reply_markup=menu)
+            await call.message.delete()
+        else:
+            await bot.send_message(chat_id = call.from_user.id,text = f"Здравствуйте уважаемый {call.from_user.full_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+            await call.message.delete()
 
 @dp.message_handler(text='jmath', chat_id = ADMINS)
 async def check_answers(message: Message):
