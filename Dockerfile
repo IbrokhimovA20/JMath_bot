@@ -9,6 +9,8 @@ ENV PYTHONUNBUFFERED 1
 
 COPY . .
 
+RUN chown -R node /app/node_modules
+
 # install dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
