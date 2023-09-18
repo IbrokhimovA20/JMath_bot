@@ -4,6 +4,6 @@ services:
   app:
     build: .
     restart: always
-    volumes:
-      - .:/jmath_bot
+    # volumes:
+    #   - .:/jmath_bot
     privileged: true
