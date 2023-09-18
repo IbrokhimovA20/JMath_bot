@@ -27,7 +27,7 @@ from keyboards.default.lyceums import lyceum
 from .all_books_programms import CAMBRIDGE,LOGICAL
 
 from aiogram.types import CallbackQuery
-from data.config import ADMINS,USERS
+from data.config import ADMINS
 from data.config import CHANNEL_ID_1, CHANNEL_ID_2
 from handlers.users.start import check_google_sheet
 

@@ -4,7 +4,7 @@ import sqlite3
 from xml.dom.domreg import registered
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
-from data.config import USERS,ADMINS,KEY,MAIN_SHEET_ID
+from data.config import ADMINS,KEY,MAIN_SHEET_ID
 from keyboards.default.main_keyboard import menu
 from keyboards.inline.follow_button import follow_inline_button
 from aiogram.types import Message

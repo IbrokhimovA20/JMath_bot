@@ -6,8 +6,6 @@ from aiogram.types import Message, ReplyKeyboardRemove
 from keyboards.default.main_keyboard import menu
 from keyboards.default.univers_1 import univers_1
 from keyboards.default.univers_3 import univers_3
-import sqlite3
-from data.config import USERS
 from data.config import CHANNEL_ID_1, CHANNEL_ID_2
 from keyboards.inline.follow_button import follow_inline_button
 from handlers.users.start import check_google_sheet
