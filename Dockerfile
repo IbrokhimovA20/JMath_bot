@@ -1,7 +1,7 @@
 FROM python:3.8.7-slim
 
 # set work directory
-WORKDIR /trand-rema
+WORKDIR /jmath_bot
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
