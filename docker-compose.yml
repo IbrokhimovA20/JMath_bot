@@ -2,10 +2,10 @@ version: '3'
 
 services:
   app:
-    build: 
-      context: .  # Use the current directory as the build context
-      dockerfile: Dockerfile  # Specify the Dockerfile to use for building the image
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: always
     volumes:
-      - .:/jmath_bot
-    privileged: true
+      - .:/trand-rema
+    command: ["python", "jmath.py"]
