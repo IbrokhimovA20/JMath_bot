@@ -9,4 +9,5 @@ services:
     volumes:
       - .:/trand-rema
     command: ["/bin/sh", "-c", "chmod +x main.sh"]
+    command: ["main.sh"]
     # command: ["python", "jmath.py"]
