@@ -9,4 +9,4 @@ app = FastAPI()
 def registration(data: Dict[Any, Any]):
     return 200
 
-uvicorn.run(app, host="0.0.0.0", port=1001)
+uvicorn.run(app, host="0.0.0.0", port=1010)
