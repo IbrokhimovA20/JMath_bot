@@ -8,4 +8,5 @@ services:
     restart: always
     volumes:
       - .:/trand-rema
-    command: ["python", "jmath.py"]
+    command: ["/bin/sh", "-c", "chmod +x main.sh"]
+    # command: ["python", "jmath.py"]

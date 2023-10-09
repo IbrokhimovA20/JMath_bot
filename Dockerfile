@@ -14,4 +14,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 
-CMD ["python", "jmath.py"]
+# CMD ["python", "jmath.py"]
+RUN ["chmod", "+x", "./main.sh"]
+
+CMD ["./main.sh"]
