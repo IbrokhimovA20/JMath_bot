@@ -104,7 +104,7 @@ def get_time(data: Dict[Any, Any]):
 def get_time(data: Dict[Any, Any]):
     if data["subject"] == "Математика":
         dataframe = get_google_sheet_datas()
-        returning_data = dataframe[dataframe["Предмет"] == "Математика"]
+        returning_data = dataframe[dataframe["Предмет"] == "математика"]
         students = returning_data[returning_data["Время"] == data["time"]]
         students = students["Ф.И.О."].to_list()
     elif data["subject"] == "Немецкий":
