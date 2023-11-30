@@ -10,7 +10,7 @@ from keyboards.inline.follow_button import follow_inline_button
 from aiogram.types import Message
 from keyboards.inline.callback_data import follow_callback
 from aiogram.types import CallbackQuery
-from data.config import CHANNEL_ID_1, CHANNEL_ID_2
+from data.config import CHANNEL_ID_1
 from states.dtm_state import userState
 from aiogram.dispatcher import FSMContext
 import gspread as gd

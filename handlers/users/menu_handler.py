@@ -28,7 +28,7 @@ from .all_books_programms import CAMBRIDGE,LOGICAL
 
 from aiogram.types import CallbackQuery
 from data.config import ADMINS
-from data.config import CHANNEL_ID_1, CHANNEL_ID_2
+from data.config import CHANNEL_ID_1
 from handlers.users.start import check_google_sheet
 
 from loader import dp, bot
@@ -46,7 +46,7 @@ async def see_what(message:Message):
 @dp.message_handler(text='Логические задания🧠')
 async def send_logical(message: Message):
     if check_google_sheet(message.chat.id):
-        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             for book in LOGICAL:
                 await message.reply_document(document = book)
         else:
@@ -61,7 +61,7 @@ async def download(message: Message):
 @dp.message_handler(text='Библиотека📚')
 async def send_libray(message: Message):
     if check_google_sheet(message.chat.id):
-        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             await message.answer("Choose", reply_markup=library_books)
         else:
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
@@ -101,7 +101,7 @@ async def send_lesson(message: Message):
 @dp.message_handler(text='Темы📝')
 async def select_class(message: Message):
     if check_google_sheet(message.chat.id):
-        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             await message.answer('Выберите предмет: ', reply_markup = category_subject)
         else:
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
@@ -110,7 +110,7 @@ async def select_class(message: Message):
 @dp.message_handler(text='Лайфхаки 💯')
 async def select_class(message: Message):
     if check_google_sheet(message.chat.id):
-        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             await message.answer('А лайфхаки вы можете увидеть в нашем youtube канале  \n\n\n\n https://www.youtube.com/@jmath4124')
         else:
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
@@ -119,7 +119,7 @@ async def select_class(message: Message):
 @dp.message_handler(text='Лицеи 🎒')
 async def select_class(message: Message):
     if check_google_sheet(message.chat.id):
-        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = message.chat.id)):
+        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             await message.answer('Выберите лицей: ', reply_markup = lyceum)
         else:
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
