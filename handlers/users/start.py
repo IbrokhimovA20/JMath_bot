@@ -66,18 +66,18 @@ def get_google_sheet_datas():
 
 @dp.message_handler(CommandStart(), state='*')
 async def bot_start(message: types.Message, state:FSMContext):
-    df = get_google_sheet_datas()
-    if str(message.chat.id) in list(df["student_id"]) or str(message.chat.id) in list(df["family_id"]):
-        if check_google_sheet(message.chat.id):
-            if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
-                await bot.send_message(chat_id = message.chat.id, text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! приятного пользования", reply_markup=menu)
-                await message.delete()
-                await state.reset_state()
-            else:
-                await message.answer(f"Здравствуйте уважаемый {message.from_user.full_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
-                await state.reset_state()
+    # df = get_google_sheet_datas()
+    # if str(message.chat.id) in list(df["student_id"]) or str(message.chat.id) in list(df["family_id"]):
+        # if check_google_sheet(message.chat.id):
+    if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
+        await bot.send_message(chat_id = message.chat.id, text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! приятного пользования", reply_markup=menu)
+        await message.delete()
+        await state.reset_state()
     else:
-        await bot.send_message(chat_id = message.chat.id, text = f"Здравствуйте уважаемый {message.chat.first_name}, Поделитесь своим контактом пожалуйста", reply_markup = take_contact)
+        await message.answer(f"Здравствуйте уважаемый {message.from_user.full_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+        await state.reset_state()
+    # else:
+        # await bot.send_message(chat_id = message.chat.id, text = f"Здравствуйте уважаемый {message.chat.first_name}, Поделитесь своим контактом пожалуйста", reply_markup = take_contact)
 
 
 def save_ids(message):
