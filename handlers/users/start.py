@@ -101,13 +101,13 @@ async def take_user_contact(message: types.Message):
 
 @dp.callback_query_handler(follow_callback.filter(item_name = 'followed'))
 async def chech_following(call: CallbackQuery, callback_data: dict):
-    if check_google_sheet(call.from_user.id):
-        if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = call.from_user.id)) and check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_2, user_id = call.from_user.id)):
-            await bot.send_message(chat_id = call.from_user.id, text = f"Здравствуйте уважаемый {call.from_user.full_name}, добро пожаловать на бот J.M.ath! приятного пользования", reply_markup=menu)
-            await call.message.delete()
-        else:
-            await bot.send_message(chat_id = call.from_user.id,text = f"Здравствуйте уважаемый {call.from_user.full_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
-            await call.message.delete()
+    # if check_google_sheet(call.from_user.id):
+    if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = call.from_user.id)):
+        await bot.send_message(chat_id = call.from_user.id, text = f"Здравствуйте уважаемый {call.from_user.full_name}, добро пожаловать на бот J.M.ath! приятного пользования", reply_markup=menu)
+        await call.message.delete()
+    else:
+        await bot.send_message(chat_id = call.from_user.id,text = f"Здравствуйте уважаемый {call.from_user.full_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+        await call.message.delete()
 
 @dp.message_handler(text='jmath', chat_id = ADMINS)
 async def check_answers(message: Message):
