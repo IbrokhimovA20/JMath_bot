@@ -96,7 +96,7 @@ def save_ids(message):
 @dp.message_handler(content_types=ContentType.CONTACT)
 async def take_user_contact(message: types.Message):
     Thread(target=save_ids, args=(message,)).start()
-    await bot.send_message(chat_id = message.chat.id, text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот Platinum School! приятного пользования", reply_markup=menu)
+    await bot.send_message(chat_id = message.chat.id, text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! приятного пользования", reply_markup=menu)
     await message.delete()
 
 @dp.callback_query_handler(follow_callback.filter(item_name = 'followed'))
