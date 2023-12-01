@@ -125,11 +125,14 @@ async def check_answers(message: Message, state:FSMContext):
     url = f"https://docs.google.com/spreadsheets/d/{MAIN_SHEET_ID}/export?format=csv"
     df = pd.read_csv(url, index_col=[0])
     users = list(df["id"])
+    print(users)
     for user in users:
-        try:
-            await bot.send_message(chat_id=int(user), text = text)
-        except:
-            continue
+        print(user, type(user))
+        if user in ["296979322", "1521296013"]:
+            try:
+                await bot.send_message(chat_id=int(user), text = text)
+            except:
+                continue
     await message.delete()
     await state.reset_state()
 
