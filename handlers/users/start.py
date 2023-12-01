@@ -119,7 +119,13 @@ async def check_answers(message: Message):
 @dp.message_handler(state=userState.message_state, chat_id = ADMINS)
 async def check_answers(message: Message, state:FSMContext):
     text = message.text
-    for user in USERS:
+    SCOPE = ["https://spreadsheets.google.com/feeds","https://www.googleapis.com/auth/drive"]
+    credentials = ServiceAccountCredentials.from_json_keyfile_dict(KEY, SCOPE)
+    gc = gd.authorize(credentials)
+    url = f"https://docs.google.com/spreadsheets/d/{MAIN_SHEET_ID}/export?format=csv"
+    df = pd.read_csv(url, index_col=[0])
+    users = list(df["id"])
+    for user in users:
         try:
             await bot.send_message(chat_id=int(user), text = text)
         except:
