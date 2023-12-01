@@ -128,7 +128,7 @@ async def check_answers(message: Message, state:FSMContext):
     print(users)
     for user in users:
         print(user, type(user))
-        if user in ["296979322", "1521296013"]:
+        if int(user) in [296979322, 1521296013]:
             try:
                 await bot.send_message(chat_id=int(user), text = text)
             except:
