@@ -100,7 +100,7 @@ async def give_to_group(message: Message, state:FSMContext):
 @dp.callback_query_handler(text=['not_understood', 'understood'], state=userState.question_state)
 async def buy_courses(call: CallbackQuery, state: FSMContext):
     if call.data == "understood":
-        await bot.send_message(chat_id=call.from_user.id, text="Cпасибо что воспользовались нашим ботом удачи вам в дальнейшем!", reply_markup=menu)
+        await bot.send_message(chat_id=call.from_user.id, text="Cпасибо что воспользовались нашим ботом. Удачи вам в дальнейшем!", reply_markup=menu)
         await state.reset_state()
     elif call.data == "not_understood":
         await bot.send_message(chat_id=ADMINS_GROUP, text=f"Ученик {call.from_user.first_name}, не понял объяснение")
