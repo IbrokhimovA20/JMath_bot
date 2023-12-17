@@ -6,3 +6,4 @@ class StateDtm(StatesGroup):
  
 class userState(StatesGroup):
     message_state = State()
+    question_state = State()

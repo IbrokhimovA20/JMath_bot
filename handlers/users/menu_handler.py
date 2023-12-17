@@ -24,6 +24,8 @@ from keyboards.default.uzbek_books import uzb_books
 from keyboards.default.russian_books import rus_books
 from keyboards.inline.follow_button import follow_inline_button
 from keyboards.default.lyceums import lyceum
+from states.dtm_state import userState
+from aiogram.dispatcher import FSMContext
 from .all_books_programms import CAMBRIDGE,LOGICAL
 
 from aiogram.types import CallbackQuery
@@ -43,6 +45,11 @@ def check_sub_channel(chat_member):
 async def see_what(message:Message):
     print(message)
 
+@dp.message_handler(content_types=ContentType.DOCUMENT, chat_id = ADMINS)
+async def download(message: Message):
+    doc_id = message.document.file_id
+    await message.answer(f"ID {doc_id}")
+
 @dp.message_handler(text='Логические задания🧠')
 async def send_logical(message: Message):
     if check_google_sheet(message.chat.id):
@@ -53,10 +60,22 @@ async def send_logical(message: Message):
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
             await message.delete()
 
-@dp.message_handler(content_types=ContentType.DOCUMENT, chat_id = ADMINS)
-async def download(message: Message):
-    doc_id = message.document.file_id
-    await message.answer(f"ID {doc_id}")
+@dp.message_handler(text='Задать Вопрос❓')
+async def send__question_to_group(message: Message):
+    if check_google_sheet(message.chat.id):
+        await bot.send_message(chat_id=message.chat.id, text="""Вы можете отправить свой вопрос ввиде текста,фото или видеосообщения если не хотите то нажмите 
+/cancel""")
+        # if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
+        # else:
+        #     await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
+        #     await message.delete()
+        await userState.question_state.set()
+
+@dp.message_handler(commands=['cancel'], state="*")
+async def cancel_number(message: types.Message, state:FSMContext):
+    await state.reset_state()
+
+
 
 @dp.message_handler(text='Библиотека📚')
 async def send_libray(message: Message):

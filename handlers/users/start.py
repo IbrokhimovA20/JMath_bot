@@ -132,4 +132,3 @@ async def check_answers(message: Message, state:FSMContext):
             continue
     await message.delete()
     await state.reset_state()
-

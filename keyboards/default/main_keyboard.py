@@ -13,7 +13,8 @@ menu  = ReplyKeyboardMarkup(
             KeyboardButton(text='Лицеи 🎒')
         ],
         [
-            KeyboardButton(text='Библиотека📚')
+            KeyboardButton(text='Библиотека📚'),
+            KeyboardButton(text='Задать Вопрос❓')
         ]
     ], 
 resize_keyboard=True

@@ -10,3 +10,13 @@ follow_inline_button = InlineKeyboardMarkup(row_width=1)
 follow_inline_button.insert(InlineKeyboardButton(text='Подписаться↗️', url='https://t.me/J_M_ath'))
 # follow_inline_button.insert(InlineKeyboardButton(text='Подписаться↗️', url='https://t.me/platinum_school_tashkent'))
 follow_inline_button.insert(InlineKeyboardButton(text='Подписался/ась🟢', callback_data=follow_callback.new(item_name='followed')))
+
+
+user_answer = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [ 
+        InlineKeyboardButton(text='Да✅', callback_data='understood'),
+        InlineKeyboardButton(text='Нет❌', callback_data='not_understood'),
+    ]
+    ]
+)
