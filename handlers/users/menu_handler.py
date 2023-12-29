@@ -9,7 +9,6 @@ from keyboards.inline.classes import category_type
 from keyboards.inline.classes import category_subject
 from keyboards.default.univers_1 import univers_1
 from keyboards.inline.themes import theme_5_6
-from keyboards.inline.themes import themes_6
 from keyboards.inline.themes import themes_7
 from keyboards.inline.themes import themes_8
 from keyboards.inline.themes import themes_9
