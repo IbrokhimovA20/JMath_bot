@@ -4,7 +4,6 @@ from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message, ReplyKeyboardRemove
 from keyboards.inline.callback_data import lesson_callback
 from keyboards.inline.konspekts import *
-from keyboards.inline.themes import themes_6
 
 
 from aiogram.types import CallbackQuery
