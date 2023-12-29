@@ -66,6 +66,7 @@ def get_google_sheet_datas():
 
 @dp.message_handler(CommandStart(), state='*')
 async def bot_start(message: types.Message, state:FSMContext):
+    print(message)
     # df = get_google_sheet_datas()
     # if str(message.chat.id) in list(df["student_id"]) or str(message.chat.id) in list(df["family_id"]):
         # if check_google_sheet(message.chat.id):

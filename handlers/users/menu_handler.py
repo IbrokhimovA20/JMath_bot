@@ -8,7 +8,7 @@ from keyboards.default.library import library_books
 from keyboards.inline.classes import category_type
 from keyboards.inline.classes import category_subject
 from keyboards.default.univers_1 import univers_1
-from keyboards.inline.themes import themes_5
+from keyboards.inline.themes import theme_5_6
 from keyboards.inline.themes import themes_6
 from keyboards.inline.themes import themes_7
 from keyboards.inline.themes import themes_8
@@ -60,7 +60,7 @@ async def send_logical(message: Message):
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
             await message.delete()
 
-@dp.message_handler(text='Задать Вопрос❓')
+@dp.message_handler(text='Задать Вопрос❓', state="*")
 async def send__question_to_group(message: Message):
     if check_google_sheet(message.chat.id):
         await bot.send_message(chat_id=message.chat.id, text="""Вы можете отправить свой вопрос ввиде текста,фото или видеосообщения если не хотите то нажмите 
@@ -188,17 +188,17 @@ async def buy_courses(call: CallbackQuery, callback_data: dict):
     if check_google_sheet(call.from_user.id):
         await call.message.edit_reply_markup(reply_markup=geometriya_themes_3)
 
-@dp.callback_query_handler(text='5_class')
+@dp.callback_query_handler(text='5_6_class')
 async def buy_courses(call: CallbackQuery):
     if check_google_sheet(call.from_user.id):
-        await call.message.answer('Выберите тему', reply_markup = themes_5)
+        await call.message.answer('Выберите тему', reply_markup = theme_5_6)
         await call.message.delete()
 
-@dp.callback_query_handler(text='6_class')
-async def buy_courses(call: CallbackQuery):
-    if check_google_sheet(call.from_user.id):
-        await call.message.answer('Выберите тему', reply_markup = themes_6)
-        await call.message.delete()
+# @dp.callback_query_handler(text='6_class')
+# async def buy_courses(call: CallbackQuery):
+#     if check_google_sheet(call.from_user.id):
+#         await call.message.answer('Выберите тему', reply_markup = themes_6)
+#         await call.message.delete()
 
 @dp.callback_query_handler(text='7_class')
 async def buy_courses(call: CallbackQuery):

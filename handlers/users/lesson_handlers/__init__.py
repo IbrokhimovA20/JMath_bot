@@ -1,4 +1,4 @@
-from . import lessons_handler_5
+from . import lessons_handler_5_6
 from . import lessons_handler_6
 from . import lessons_handler_7
 from . import lessons_handler_8

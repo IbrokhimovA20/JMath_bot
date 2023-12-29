@@ -14,7 +14,8 @@ async def give_to_group(message: Message, state:FSMContext):
     mes = await bot.forward_message(chat_id=ADMINS_GROUP, message_id=message.message_id, from_chat_id=message.from_user.id)
     df = pd.read_pickle("user_messages.pickle")
     pd.concat([pd.DataFrame({"user_id" : message.from_user.id, "message_id" : mes.message_id}, index=[0]),df]).to_pickle("user_messages.pickle")
-
+    await bot.send_message(chat_id=message.chat.id, text="""Ваш вопрос отправлен в группу дождитесь ответа""")
+    state.reset_state()
 
 
 @dp.message_handler(content_types=['photo'], state=userState.question_state)
@@ -23,7 +24,8 @@ async def give_to_group(message: Message, state:FSMContext):
     # mes = await bot.send_photo(chat_id=ADMINS_GROUP, photo=f"{message.photo[-1].file_id}")
     df = pd.read_pickle("user_messages.pickle")
     pd.concat([pd.DataFrame({"user_id" : message.from_user.id, "message_id" : mes.message_id}, index=[0]),df]).to_pickle("user_messages.pickle")
-
+    await bot.send_message(chat_id=message.chat.id, text="""Ваш вопрос отправлен в группу дождитесь ответа""")
+    state.reset_state()
 
 
 @dp.message_handler(chat_id=ADMINS_GROUP)
@@ -79,13 +81,14 @@ async def give_to_group(message: Message, state:FSMContext):
         pass
 
 
-
 @dp.message_handler(content_types=['voice'], state=userState.question_state)
 async def give_to_group(message: Message, state:FSMContext):
     mes = await bot.forward_message(chat_id=ADMINS_GROUP, message_id=message.message_id, from_chat_id=message.from_user.id)
     # mes = await bot.send_voice(chat_id=ADMINS_GROUP, voice=f"{message.voice.file_id}")
     df = pd.read_pickle("user_messages.pickle")
     pd.concat([pd.DataFrame({"user_id" : message.from_user.id, "message_id" : mes.message_id}, index=[0]),df]).to_pickle("user_messages.pickle")
+    await bot.send_message(chat_id=message.chat.id, text="""Ваш вопрос отправлен в группу дождитесь ответа""")
+    state.reset_state()
 
 
 
@@ -95,6 +98,8 @@ async def give_to_group(message: Message, state:FSMContext):
     # mes = await bot.send_video_note(chat_id=ADMINS_GROUP, video_note=f"{message.video_note.file_id}")
     df = pd.read_pickle("user_messages.pickle")
     pd.concat([pd.DataFrame({"user_id" : message.from_user.id, "message_id" : mes.message_id}, index=[0]),df]).to_pickle("user_messages.pickle")
+    await bot.send_message(chat_id=message.chat.id, text="""Ваш вопрос отправлен в группу дождитесь ответа""")
+    state.reset_state()
 
 
 @dp.callback_query_handler(text=['not_understood', 'understood'], state=userState.question_state)

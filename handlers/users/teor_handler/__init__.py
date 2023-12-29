@@ -1,4 +1,4 @@
-from . import konspekt_handler_5
+from . import teor_handler_5_6
 from . import konspekt_handler_6
 from . import konspekt_handler_7
 from . import konspekt_handler_8

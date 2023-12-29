@@ -8,17 +8,23 @@ from keyboards.inline.callback_data import themes_callback
 
 from loader import dp
 
-theme_5 = {'НОД и НОК':'nod_nok',
-        'Обыкновенные дроби': 'obiknovenniye_drobi',
-        'Десятичные дроби':'desyatichniye_drobi',
-        'Задачи на движение':'zadachi_na_dvijeniye',
-        'Признаки делимости чисел':'delimosti_chisel'}
+# theme_5 = {'НОД и НОК':'nod_nok',
+#         'Обыкновенные дроби': 'obiknovenniye_drobi',
+#         'Десятичные дроби':'desyatichniye_drobi',
+#         'Задачи на движение':'zadachi_na_dvijeniye',
+#         'Признаки делимости чисел':'delimosti_chisel'}
 
-theme_6 = {'Бесконечно периодические дроби': 'bes_per_drobi',
-    'Пропорция':'proportion',
-    'Масштаб':'masshtab',
-    'Целые числа':'chisla',
-    'Задачи на движение по воде':'dvij_po_vode'}
+theme_5_6 = {'Обыкновенные дроби': 'obiknovenniye_drobi',
+        'Десятичные дроби':'desyatichniye_drobi',
+        'Периодические дроби' : 'period_drobi',
+        'Действия над рациональными числами':'ratsion_chisla',
+        'Степень с рациональным показателем':'stepen_ratsion_chisel'}
+
+# theme_6 = {'Бесконечно периодические дроби': 'bes_per_drobi',
+#     'Пропорция':'proportion',
+#     'Масштаб':'masshtab',
+#     'Целые числа':'chisla',
+#     'Задачи на движение по воде':'dvij_po_vode'}
 
 theme_7 = {'Степень':'stepen',
     'Одночлены':'odnochlen',
@@ -92,14 +98,9 @@ geometriya_4 = {'Пирамида':'piramida',
 nazad = InlineKeyboardButton(text='назад', callback_data='nazad_v_klass')
 
 themes_5 = InlineKeyboardMarkup(row_width=1)
-for key, value in theme_5.items():
+for key, value in theme_5_6.items():
     themes_5.insert(InlineKeyboardButton(text=key, callback_data = themes_callback.new(item_name=value)))
 themes_5.insert(nazad)
-
-themes_6 = InlineKeyboardMarkup(row_width=1)
-for key,value in theme_6.items():
-    themes_6.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
-themes_6.insert(nazad)
 
 themes_7 = InlineKeyboardMarkup(row_width=1)
 for key,value in theme_7.items():
