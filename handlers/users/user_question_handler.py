@@ -109,6 +109,6 @@ async def buy_courses(call: CallbackQuery, state: FSMContext):
         await state.reset_state()
     elif call.data == "not_understood":
         await bot.send_message(chat_id=ADMINS_GROUP, text=f"Ученик {call.from_user.first_name}, не понял объяснение")
-        await bot.send_message(chat_id=call.from_user.id, text="""Ваш вопрос отправлен в группу дождитесь ответа""")
+        await bot.send_message(chat_id=call.from_user.id, text="""Напишите или отправьте фотку что именно вы не поняли""")
 
     await call.message.delete()
