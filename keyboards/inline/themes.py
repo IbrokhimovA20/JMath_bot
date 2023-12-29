@@ -97,10 +97,10 @@ geometriya_4 = {'Пирамида':'piramida',
 
 nazad = InlineKeyboardButton(text='назад', callback_data='nazad_v_klass')
 
-themes_5 = InlineKeyboardMarkup(row_width=1)
+themes_5_6 = InlineKeyboardMarkup(row_width=1)
 for key, value in theme_5_6.items():
-    themes_5.insert(InlineKeyboardButton(text=key, callback_data = themes_callback.new(item_name=value)))
-themes_5.insert(nazad)
+    themes_5_6.insert(InlineKeyboardButton(text=key, callback_data = themes_callback.new(item_name=value)))
+themes_5_6.insert(nazad)
 
 themes_7 = InlineKeyboardMarkup(row_width=1)
 for key,value in theme_7.items():
