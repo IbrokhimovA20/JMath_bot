@@ -15,7 +15,7 @@ async def give_to_group(message: Message, state:FSMContext):
     df = pd.read_pickle("user_messages.pickle")
     pd.concat([pd.DataFrame({"user_id" : message.from_user.id, "message_id" : mes.message_id}, index=[0]),df]).to_pickle("user_messages.pickle")
     await bot.send_message(chat_id=message.chat.id, text="""Ваш вопрос отправлен в группу дождитесь ответа""")
-    state.reset_state()
+    await state.reset_state()
 
 
 @dp.message_handler(content_types=['photo'], state=userState.question_state)

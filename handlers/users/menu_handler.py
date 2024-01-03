@@ -185,6 +185,7 @@ async def buy_courses(call: CallbackQuery, callback_data: dict):
 @dp.callback_query_handler(themes_callback.filter(item_name='prev_3'))
 async def buy_courses(call: CallbackQuery, callback_data: dict):
     if check_google_sheet(call.from_user.id):
+
         await call.message.edit_reply_markup(reply_markup=geometriya_themes_3)
 
 @dp.callback_query_handler(text='5_6_class')
