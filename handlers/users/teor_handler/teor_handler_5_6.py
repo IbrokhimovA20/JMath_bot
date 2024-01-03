@@ -46,6 +46,12 @@ async def buying_corse(call: CallbackQuery, callback_data: dict):
     await call.message.reply_document(document = "BQACAgIAAxkBAAKfimWOygJKz45-FZOd0V2BktW7kCYaAAKgOAACbbVpSIzppBMGo7c3NAQ")
     await call.message.delete()
 
+
+@dp.callback_query_handler(lesson_callback.filter(item_name = 'shpar_stepen_rat_chisla'))
+async def buying_corse(call: CallbackQuery, callback_data: dict):
+    await call.message.reply_document(document = "BQACAgIAAxkBAAKhsGWU8ZBch2aTt497bBPFOg92lxDwAAImRwACSEyoSCYrFX29LNWYNAQ")
+    await call.message.delete()
+
 @dp.callback_query_handler(text='nazad_5_6')
 async def buying_corse(call: CallbackQuery):
     await call.message.answer('Выберите тему', reply_markup = theme_5_6)
