@@ -75,7 +75,7 @@ async def give_to_group(message: Message, state:FSMContext):
         tg_id = df[df["message_id"] == message["reply_to_message"]["message_id"]]["user_id"].iloc[0]
         await bot.send_voice(chat_id=tg_id, voice=f"{message.voice.file_id}")
         await bot.send_message(chat_id=tg_id, text="Вам понятен ответ ?", reply_markup=user_answer)
-        # await userState.question_state.set()
+        await userState.question_state.set()
         # await bot.send_message(chat_id=tg_id, text=message.text)
     except:
         pass
@@ -110,5 +110,5 @@ async def buy_courses(call: CallbackQuery, state: FSMContext):
     elif call.data == "not_understood":
         await bot.send_message(chat_id=ADMINS_GROUP, text=f"Ученик {call.from_user.first_name}, не понял объяснение")
         await bot.send_message(chat_id=call.from_user.id, text="""Напишите или отправьте фотку что именно вы не поняли""")
-
+        await userState.question_state.set()
     await call.message.delete()
