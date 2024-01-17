@@ -9,6 +9,7 @@ from keyboards.default.univers_3 import univers_3
 from data.config import CHANNEL_ID_1
 from keyboards.inline.follow_button import follow_inline_button
 from handlers.users.start import check_google_sheet
+from aiogram.dispatcher import FSMContext
 
 from loader import dp, bot
 
@@ -18,24 +19,28 @@ def check_sub_channel(chat_member):
     else: 
         return False
     
-@dp.message_handler(text='Университеты 🎓')
-async def send_tests(message: Message):
+@dp.message_handler(text='Университеты 🎓', state='*')
+async def send_tests(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             await message.answer('Выберите ВУЗ', reply_markup=univers_1)
+            await state.reset_state()
         else:
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
             await message.delete()
+            await state.reset_state()
 
-@dp.message_handler(text='назад')
-async def send_lesson(message: Message):
+@dp.message_handler(text='назад', state='*')
+async def send_lesson(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         await message.answer("Choose",reply_markup=menu)
+        await state.reset_state()
 
-@dp.message_handler(text='⬅️')
-async def send_lesson(message: Message):
+@dp.message_handler(text='⬅️', state='*')
+async def send_lesson(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         await message.answer("Выберите ВУЗ",reply_markup=univers_1)
+        await state.reset_state()
 
 
 @dp.message_handler(text='⬅️')

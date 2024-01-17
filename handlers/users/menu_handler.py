@@ -49,15 +49,17 @@ async def download(message: Message):
     doc_id = message.document.file_id
     await message.answer(f"ID {doc_id}")
 
-@dp.message_handler(text='Логические задания🧠')
-async def send_logical(message: Message):
+@dp.message_handler(text='Логические задания🧠', state='*')
+async def send_logical(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             for book in LOGICAL:
                 await message.reply_document(document = book)
+            await state.reset_state()
         else:
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
             await message.delete()
+            await state.reset_state()
 
 @dp.message_handler(text='Задать Вопрос❓', state="*")
 async def send__question_to_group(message: Message):
@@ -76,85 +78,102 @@ async def cancel_number(message: types.Message, state:FSMContext):
 
 
 
-@dp.message_handler(text='Библиотека📚')
-async def send_libray(message: Message):
+@dp.message_handler(text='Библиотека📚', state='*')
+async def send_libray(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             await message.answer("Choose", reply_markup=library_books)
+            await state.reset_state()
         else:
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
             await message.delete()
+            await state.reset_state()
 
-@dp.message_handler(text='📓 Cambridge Assessment')
-async def send_libray(message: Message):
+@dp.message_handler(text='📓 Cambridge Assessment', state='*')
+async def send_libray(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         for book in CAMBRIDGE:
             await message.reply_document(document = book)
+        await state.reset_state()
 
-@dp.message_handler(text='🇺🇿 Узбекские книги')
-async def send_logical(message: Message):
+@dp.message_handler(text='🇺🇿 Узбекские книги', state='*')
+async def send_logical(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         await message.answer("Choose", reply_markup = uzb_books)
+        await state.reset_state()
 
-@dp.message_handler(text='🇷🇺 Российские книги')
-async def send_logical(message: Message):
+@dp.message_handler(text='🇷🇺 Российские книги', state='*')
+async def send_logical(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         await message.answer("Choose", reply_markup = rus_books)
+        await state.reset_state()
 
-@dp.message_handler(text='назад')
-async def send_lesson(message: Message):
+@dp.message_handler(text='назад', state='*')
+async def send_lesson(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         await message.answer("Choose",reply_markup=menu)
+        await state.reset_state()
+    
 
-@dp.message_handler(text='Назад⬆️')
-async def send_lesson(message: Message):
+@dp.message_handler(text='Назад⬆️', state='*')
+async def send_lesson(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         await message.answer("Choose",reply_markup=menu)
+        await state.reset_state()
 
 @dp.message_handler(text='Назад ⬆️')
-async def send_lesson(message: Message):
+async def send_lesson(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         await message.answer("Choose",reply_markup=library_books)
+        await state.reset_state()
 
-@dp.message_handler(text='Темы📝')
-async def select_class(message: Message):
+@dp.message_handler(text='Темы📝', state='*')
+async def select_class(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             await message.answer('Выберите предмет: ', reply_markup = category_subject)
+            await state.reset_state()
         else:
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
             await message.delete()
+            await state.reset_state()
 
-@dp.message_handler(text='Лайфхаки 💯')
-async def select_class(message: Message):
+@dp.message_handler(text='Лайфхаки 💯', state='*')
+async def select_class(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             await message.answer('А лайфхаки вы можете увидеть в нашем youtube канале  \n\n\n\n https://www.youtube.com/@jmath4124')
+            await state.reset_state()
         else:
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
             await message.delete()
+            await state.reset_state()
 
-@dp.message_handler(text='Лицеи 🎒')
-async def select_class(message: Message):
+@dp.message_handler(text='Лицеи 🎒', state='*')
+async def select_class(message: Message, state:FSMContext):
     if check_google_sheet(message.chat.id):
         if check_sub_channel(await bot.get_chat_member(chat_id = CHANNEL_ID_1, user_id = message.chat.id)):
             await message.answer('Выберите лицей: ', reply_markup = lyceum)
+            await state.reset_state()
         else:
             await bot.send_message(chat_id = message.chat.id,text = f"Здравствуйте уважаемый {message.chat.first_name}, добро пожаловать на бот J.M.ath! для того чтобы пользоваться ботом подпишитесь на канал J.M.ath", reply_markup=follow_inline_button)
             await message.delete()
+            await state.reset_state()
 
-@dp.callback_query_handler(text='algebra')
-async def buy_courses(call: CallbackQuery):
+@dp.callback_query_handler(text='algebra', state='*')
+async def buy_courses(call: CallbackQuery, state:FSMContext):
     if check_google_sheet(call.from_user.id):
         await call.message.answer('Выберите класс', reply_markup = category_type)
         await call.message.delete()
         await call.answer(cache_time=10)
+        await state.reset_state()
 
-@dp.callback_query_handler(text='geometry')
-async def buy_courses(call: CallbackQuery):
+@dp.callback_query_handler(text='geometry', state='*')
+async def buy_courses(call: CallbackQuery, state:FSMContext):
     if check_google_sheet(call.from_user.id):
         await call.message.answer('Выберите тему', reply_markup = geometriya_themes_1)
         await call.message.delete()
+        await state.reset_state()
 
 @dp.callback_query_handler(themes_callback.filter(item_name='next_1'))
 async def buy_courses(call: CallbackQuery, callback_data : dict):
