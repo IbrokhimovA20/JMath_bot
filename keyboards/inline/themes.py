@@ -26,24 +26,30 @@ theme_5_6 = {'Обыкновенные дроби': 'obiknovenniye_drobi',
 #     'Целые числа':'chisla',
 #     'Задачи на движение по воде':'dvij_po_vode'}
 
-theme_7 = {'Степень':'stepen',
-    'Одночлены':'odnochlen',
-    'Многочлены':'mnogochlen',
-    'Разложение на множители':'razloj_mnojiteli',
-    'Формулы сокращённого умножения':'formula_umnoj',
-    'Алгебраические дроби':'algebra_drobi',
-    'Линейные уравнения':'lin_uravneniya',
-    'Система линейных уравнений':'sistema_lin_urav',
-    'Линейная функция':'lin_func'}
 
-theme_8 = {'Квадратрые корни':'kvadrad_korni',
-    'Квадратные уравнения':'kvadrad_uravneniya',
-    'Неполные квадратные уравнения':'nepolniye_kvadrad_uravneniya',
-    'Теорема Виета':'teorema_vieta',
-    'Уравнения сводящиеся к квадратным':'urav_svod_kvadrad',
-    'Линейные неравенства':'lin_neravenstva',
-    'Система линейных неравенств':'sistema_lin_neravenstv',
-    'Метод интервалов':'metod_intervalov'}
+theme_7_8 = {''}
+
+# theme_7 = {'Степень':'stepen',
+#     'Одночлены':'odnochlen',
+#     'Многочлены':'mnogochlen',
+#     'Разложение на множители':'razloj_mnojiteli',
+#     'Формулы сокращённого умножения':'formula_umnoj',
+#     'Алгебраические дроби':'algebra_drobi',
+#     'Линейные уравнения':'lin_uravneniya',
+#     'Система линейных уравнений':'sistema_lin_urav',
+#     'Линейная функция':'lin_func'}
+
+# theme_8 = {'Квадратрые корни':'kvadrad_korni',
+#     'Квадратные уравнения':'kvadrad_uravneniya',
+#     'Неполные квадратные уравнения':'nepolniye_kvadrad_uravneniya',
+#     'Теорема Виета':'teorema_vieta',
+#     'Уравнения сводящиеся к квадратным':'urav_svod_kvadrad',
+#     'Линейные неравенства':'lin_neravenstva',
+#     'Система линейных неравенств':'sistema_lin_neravenstv',
+#     'Метод интервалов':'metod_intervalov'}
+
+
+
 
 theme_9 = {'Модульные уравнения и неравенства':'modul_uravneniya',
     'Иррациональные уравнения и неравенства':'irrat_uravneniya_neravenstva',
