@@ -27,7 +27,18 @@ theme_5_6 = {'Обыкновенные дроби': 'obiknovenniye_drobi',
 #     'Задачи на движение по воде':'dvij_po_vode'}
 
 
-theme_7_8 = {''}
+theme_7_8 = {'Одночлены  и многочлены' : 'odno_mnogochlen',
+            'Формулы сокращенного умножения' : 'formula_umnoj',
+            'Разложение на множители' : 'razloj_mnojiteli',
+            'Алгебраические дроби' : 'algebra_drobi',
+            'Арифметический корень' : 'arif_koren',
+            'Линейные уравнения' : 'lin_uravneniya',
+            'Квадратные уравнения' : 'kvadrad_uravneniya',
+            'Теорема Виета' : 'teorema_vieta',
+            'Уравнения высших степеней' : 'urav_vish_step',
+            'Система уравнений' : 'sistema_uravneniy',
+            'Неравенства + Система неравенств' : 'sistema_lin_neravenstv',
+            'Метод интервалов' : 'metod_intervalov'}
 
 # theme_7 = {'Степень':'stepen',
 #     'Одночлены':'odnochlen',
@@ -108,15 +119,15 @@ for key, value in theme_5_6.items():
     themes_5_6.insert(InlineKeyboardButton(text=key, callback_data = themes_callback.new(item_name=value)))
 themes_5_6.insert(nazad)
 
-themes_7 = InlineKeyboardMarkup(row_width=1)
-for key,value in theme_7.items():
-    themes_7.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
-themes_7.insert(nazad)
+themes_7_8 = InlineKeyboardMarkup(row_width=1)
+for key,value in themes_7_8.items():
+    themes_7_8.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
+themes_7_8.insert(nazad)
 
-themes_8 = InlineKeyboardMarkup(row_width=1)
-for key,value in theme_8.items():
-    themes_8.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
-themes_8.insert(nazad)
+# themes_8 = InlineKeyboardMarkup(row_width=1)
+# for key,value in theme_8.items():
+#     themes_8.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
+# themes_8.insert(nazad)
 
 themes_9 = InlineKeyboardMarkup(row_width=1)
 for key,value in theme_9.items():
