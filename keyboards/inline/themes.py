@@ -14,11 +14,11 @@ from loader import dp
 #         'Задачи на движение':'zadachi_na_dvijeniye',
 #         'Признаки делимости чисел':'delimosti_chisel'}
 
-theme_5_6 = {'Обыкновенные дроби': 'obiknovenniye_drobi',
-        'Десятичные дроби':'desyatichniye_drobi',
-        'Периодические дроби' : 'period_drobi',
-        'Действия над рациональными числами':'ratsion_chisla',
-        'Степень с рациональным показателем':'stepen_ratsion_chisel'}
+theme_5_6 = {'Обыкновенные дроби': 'theme_obiknovenniye_drobi',
+        'Десятичные дроби':'theme_desyatichniye_drobi',
+        'Периодические дроби' : 'theme_period_drobi',
+        'Действия над рациональными числами':'theme_ratsion_chisla',
+        'Степень с рациональным показателем':'theme_stepen_ratsion_chisel'}
 
 # theme_6 = {'Бесконечно периодические дроби': 'bes_per_drobi',
 #     'Пропорция':'proportion',
@@ -27,18 +27,18 @@ theme_5_6 = {'Обыкновенные дроби': 'obiknovenniye_drobi',
 #     'Задачи на движение по воде':'dvij_po_vode'}
 
 
-theme_7_8 = {'Одночлены  и многочлены' : 'odno_mnogochlen',
-            'Формулы сокращенного умножения' : 'formula_umnoj',
-            'Разложение на множители' : 'razloj_mnojiteli',
-            'Алгебраические дроби' : 'algebra_drobi',
-            'Арифметический корень' : 'arif_koren',
-            'Линейные уравнения' : 'lin_uravneniya',
-            'Квадратные уравнения' : 'kvadrad_uravneniya',
-            'Теорема Виета' : 'teorema_vieta',
-            'Уравнения высших степеней' : 'urav_vish_step',
-            'Система уравнений' : 'sistema_uravneniy',
-            'Неравенства + Система неравенств' : 'sistema_lin_neravenstv',
-            'Метод интервалов' : 'metod_intervalov'}
+theme_7_8 = {'Одночлены  и многочлены' : 'theme_odno_mnogochlen',
+            'Формулы сокращенного умножения' : 'theme_formula_umnoj',
+            'Разложение на множители' : 'theme_razloj_mnojiteli',
+            'Алгебраические дроби' : 'theme_algebra_drobi',
+            'Арифметический корень' : 'theme_arif_koren',
+            'Линейные уравнения' : 'theme_lin_uravneniya',
+            'Квадратные уравнения' : 'theme_kvadrad_uravneniya',
+            'Теорема Виета' : 'theme_teorema_vieta',
+            'Уравнения высших степеней' : 'theme_urav_vish_step',
+            'Система уравнений' : 'theme_sistema_uravneniy',
+            'Неравенства + Система неравенств' : 'theme_sistema_lin_neravenstv',
+            'Метод интервалов' : 'theme_metod_intervalov'}
 
 # theme_7 = {'Степень':'stepen',
 #     'Одночлены':'odnochlen',
@@ -112,7 +112,25 @@ geometriya_4 = {'Пирамида':'piramida',
         'Шар и Сфера':'shar_sfera',
         'Комбинация тел':'kombinasiya'}
 
+
+all_classes = {'5_6_class' : theme_5_6, '7_8_class' : theme_7_8, '9_10_class' : theme_9, '11_class' : theme_11}
+
 nazad = InlineKeyboardButton(text='назад', callback_data='nazad_v_klass')
+
+
+
+
+async def give_class_themes(class_theme):
+    themes = InlineKeyboardMarkup(row_width=1)
+    for key, value in all_classes[class_theme].items():
+        themes.insert(InlineKeyboardButton(text=key, callback_data = themes_callback.new(item_name=value)))
+    themes.insert(nazad)
+    return themes
+
+
+
+
+
 
 themes_5_6 = InlineKeyboardMarkup(row_width=1)
 for key, value in theme_5_6.items():

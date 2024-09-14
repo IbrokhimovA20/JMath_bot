@@ -9,6 +9,7 @@ from keyboards.inline.classes import category_type
 from keyboards.inline.classes import category_subject
 from keyboards.default.univers_1 import univers_1
 from keyboards.inline.themes import themes_5_6
+from keyboards.inline.themes import give_class_themes
 from keyboards.inline.themes import themes_7
 from keyboards.inline.themes import themes_8
 from keyboards.inline.themes import themes_9
@@ -207,11 +208,19 @@ async def buy_courses(call: CallbackQuery, callback_data: dict):
 
         await call.message.edit_reply_markup(reply_markup=geometriya_themes_3)
 
-@dp.callback_query_handler(text='5_6_class')
-async def buy_courses(call: CallbackQuery):
+# @dp.callback_query_handler(text='5_6_class')
+# async def buy_courses(call: CallbackQuery):
+#     if check_google_sheet(call.from_user.id):
+#         await call.message.answer('Выберите тему', reply_markup = themes_5_6)
+#         await call.message.delete()
+
+
+@dp.callback_query_handler(lambda call: 'class' in call.data)
+async def give_algebra_classes(call : CallbackQuery):
     if check_google_sheet(call.from_user.id):
-        await call.message.answer('Выберите тему', reply_markup = themes_5_6)
+        await call.message.answer('Выберите тему', reply_markup = await give_class_themes(call.data))
         await call.message.delete()
+
 
 # @dp.callback_query_handler(text='6_class')
 # async def buy_courses(call: CallbackQuery):

@@ -10,6 +10,13 @@ from aiogram.types import CallbackQuery
 
 from loader import dp
 
+
+@dp.callback_query_handler(lambda call: 'theme' in call.data)
+async def handle_themes(call: CallbackQuery, callback_data: dict):
+    await call.message.answer('Выберите что вам нужно', )
+
+
+
 @dp.callback_query_handler(themes_callback.filter(item_name = 'obiknovenniye_drobi'))
 async def buying_corse(call: CallbackQuery, callback_data: dict):
     # await call.message.answer('В процессе скоро все дополним ...')

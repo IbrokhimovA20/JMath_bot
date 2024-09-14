@@ -18,6 +18,14 @@ nazad_geometry_3 = InlineKeyboardButton(text='назад к темам', callbac
 nazad_geometry_4 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_geometry_4')
 
 
+docs = {'obiknovenniye_drobi' : {'Шпаргалка' : True, 'видеоурок' : 'https://youtu.be/GbJfzwRQ6kQ?si=D2_MgYN-eUX0q7rb'},
+        ''}
+
+async def give_documents(theme):
+    documents = InlineKeyboardMarkup(row_width=1)
+
+
+
 obiknovenniye_drobi = InlineKeyboardMarkup(row_width=1)
 obiknovenniye_drobi.insert(InlineKeyboardButton(text='Теория', callback_data=lesson_callback.new(item_name='teor_obiknovenniye_drobi')))
 obiknovenniye_drobi.insert(InlineKeyboardButton(text='Примеры', callback_data=lesson_callback.new(item_name='prim_obiknovenniye_drobi')))
