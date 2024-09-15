@@ -8,13 +8,13 @@ from keyboards.default.library import library_books
 from keyboards.inline.classes import category_type
 from keyboards.inline.classes import category_subject
 from keyboards.default.univers_1 import univers_1
-from keyboards.inline.themes import themes_5_6
+# from keyboards.inline.themes import themes_5_6
 from keyboards.inline.themes import give_class_themes
-from keyboards.inline.themes import themes_7
-from keyboards.inline.themes import themes_8
-from keyboards.inline.themes import themes_9
-from keyboards.inline.themes import themes_10
-from keyboards.inline.themes import themes_11
+# from keyboards.inline.themes import themes_7
+# from keyboards.inline.themes import themes_8
+# from keyboards.inline.themes import themes_9
+# from keyboards.inline.themes import themes_10
+# from keyboards.inline.themes import themes_11
 from keyboards.inline.themes import geometriya_themes_1
 from keyboards.inline.themes import geometriya_themes_2
 from keyboards.inline.themes import geometriya_themes_3

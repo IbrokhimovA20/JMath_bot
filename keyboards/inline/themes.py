@@ -62,17 +62,25 @@ theme_7_8 = {'Одночлены  и многочлены' : 'theme_odno_mnogoch
 
 
 
-theme_9 = {'Модульные уравнения и неравенства':'modul_uravneniya',
+theme_9_10 = {'Модульные уравнения и неравенства':'modul_uravneniya',
     'Иррациональные уравнения и неравенства':'irrat_uravneniya_neravenstva',
     'Арифметическая прогрессия':'arif_progressiya',
     'Геометрическая прогрессия':'geometry_progressiya',
-    'Текстовые задачи':'tekst_zadachi'}
-
-theme_10 = {'Показательные уравнения и неравенства':'pokaz_urav_neravenstva',
-    'Показательная функция':'pokaz_funksiya',
+    'Линейная функция' : 'liney_funksiya',
+    'Квадратичная функция' : 'kvadrat_funksiya',
+    'Разные задачи на функцию' : 'raz_zadach_funksiya',
+    'Степенные функции' : 'stepen_funksiya',
+    'Обратная функция' : 'obrat_funksiya',
+    'Показательные уравнения и неравенства':'pokaz_urav_neravenstva',
     'Логарифммические преобразования':'log_preobrazovaniya',
     'Логарифммические уравнения и неравенства':'log_urav_neravenstva',
-    'Логарифмическая функция':'log_funskiya'}
+    'Показательная и Логарифмическая функции':'log_funskiya'}
+
+# theme_10 = {'Показательные уравнения и неравенства':'pokaz_urav_neravenstva',
+#     'Показательная функция':'pokaz_funksiya',
+#     'Логарифммические преобразования':'log_preobrazovaniya',
+#     'Логарифммические уравнения и неравенства':'log_urav_neravenstva',
+#     'Логарифмическая функция':'log_funskiya'}
 
 theme_11 = {'Производная':'proizvodnaya',
     'Сложная производная':'sloj_prozivodnaya',
@@ -132,35 +140,35 @@ async def give_class_themes(class_theme):
 
 
 
-themes_5_6 = InlineKeyboardMarkup(row_width=1)
-for key, value in theme_5_6.items():
-    themes_5_6.insert(InlineKeyboardButton(text=key, callback_data = themes_callback.new(item_name=value)))
-themes_5_6.insert(nazad)
+# themes_5_6 = InlineKeyboardMarkup(row_width=1)
+# for key, value in theme_5_6.items():
+#     themes_5_6.insert(InlineKeyboardButton(text=key, callback_data = themes_callback.new(item_name=value)))
+# themes_5_6.insert(nazad)
 
-themes_7_8 = InlineKeyboardMarkup(row_width=1)
-for key,value in themes_7_8.items():
-    themes_7_8.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
-themes_7_8.insert(nazad)
+# themes_7_8 = InlineKeyboardMarkup(row_width=1)
+# for key,value in themes_7_8.items():
+#     themes_7_8.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
+# themes_7_8.insert(nazad)
 
 # themes_8 = InlineKeyboardMarkup(row_width=1)
 # for key,value in theme_8.items():
 #     themes_8.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
 # themes_8.insert(nazad)
 
-themes_9 = InlineKeyboardMarkup(row_width=1)
-for key,value in theme_9.items():
-    themes_9.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
-themes_9.insert(nazad)
+# themes_9 = InlineKeyboardMarkup(row_width=1)
+# for key,value in theme_9.items():
+#     themes_9.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
+# themes_9.insert(nazad)
 
-themes_10 = InlineKeyboardMarkup(row_width=1)
-for key,value in theme_10.items():
-    themes_10.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
-themes_10.insert(nazad)
+# themes_10 = InlineKeyboardMarkup(row_width=1)
+# for key,value in theme_10.items():
+#     themes_10.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
+# themes_10.insert(nazad)
 
-themes_11 = InlineKeyboardMarkup(row_width=1)
-for key,value in theme_11.items():
-    themes_11.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
-themes_11.insert(nazad)
+# themes_11 = InlineKeyboardMarkup(row_width=1)
+# for key,value in theme_11.items():
+#     themes_11.insert(InlineKeyboardButton(text=key, callback_data=themes_callback.new(item_name=value)))
+# themes_11.insert(nazad)
 
 
 page_1 = InlineKeyboardButton(text='1/4', callback_data=themes_callback.new('page_1'))

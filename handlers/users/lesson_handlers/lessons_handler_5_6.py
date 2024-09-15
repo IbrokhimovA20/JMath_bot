@@ -6,14 +6,19 @@ from keyboards.inline.callback_data import themes_callback
 from keyboards.inline.konspekts import *
 
 
+
 from aiogram.types import CallbackQuery
 
 from loader import dp
 
 
 @dp.callback_query_handler(lambda call: 'theme' in call.data)
-async def handle_themes(call: CallbackQuery, callback_data: dict):
-    await call.message.answer('Выберите что вам нужно', )
+async def handle_themes(call: CallbackQuery):
+    # print(call.data.split(':')[1][6:])
+    # print(type(call.data))
+    # print(call.data[6:])
+    await call.message.answer('Выберите что вам нужно', reply_markup = await give_documents(call.data.split(':')[1][6:]))
+    await call.message.delete()
 
 
 
