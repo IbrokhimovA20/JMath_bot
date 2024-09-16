@@ -9,8 +9,8 @@ from keyboards.inline.callback_data import lesson_callback
 nazad_5_6 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_5_6')
 nazad_7_8 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_7_8')
 # nazad_8 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_8')
-nazad_9_10 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_9')
-# nazad_10 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_10')
+nazad_9 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_9')
+nazad_10 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_10')
 nazad_11 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_11')
 nazad_geometry_1 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_geometry_1')
 nazad_geometry_2 = InlineKeyboardButton(text='назад к темам', callback_data='nazad_geometry_2')
@@ -22,7 +22,7 @@ docs = {'obiknovenniye_drobi' : {'Шпаргалка' : True, 'видеоуро�
         'desyatichniye_drobi' : {'Шпаргалка' : False, 'видеоурок' : 'https://youtu.be/_iJ8GeNTxJQ?si=xoLSU7JoGid5ZCPr', 'back' : nazad_5_6},
         'period_drobi' : {'Шпаргалка' : False, 'видеоурок' : 'https://youtu.be/qcnyTmXJzjs?si=9XAUNgTVpeOiE9eN', 'back' : nazad_5_6},
         'ratsion_chisla' : {'Шпаргалка' : False, 'видеоурок' : 'https://youtu.be/DqrO4G6Irg0?si=WMnxXJoQ-yJK4zf3', 'back' : nazad_5_6},
-        'stepen_ratsion_chisel' : {'Шпаргалка' : True, 'видеоурок' : 'https://youtu.be/daFHLipLYBg?si=keVSWYccjA_hrgHb', 'back' : nazad_5_6},
+        'stepen_ratsion_chisel' : {'Шпаргалка' : True, 'видеоурок' : 'https://youtu.be/daFHLipLYBg?si=keVSWYccjA_hrgHb', 'back' : nazad_7_8},
         'odno_mnogochlen' : {'Шпаргалка' : True, 'видеоурок' : 'https://youtu.be/5D8Z74at47o','back' : nazad_7_8},
         'formula_umnoj' : {'Шпаргалка' : True, 'видеоурок' : False,'back' : nazad_7_8},
         'razloj_mnojiteli' : {'Шпаргалка' : False, 'видеоурок' : False,'back' : nazad_7_8},
@@ -34,7 +34,52 @@ docs = {'obiknovenniye_drobi' : {'Шпаргалка' : True, 'видеоуро�
         'urav_vish_step' :{'Шпаргалка' : False, 'видеоурок' :False,'back' : nazad_7_8},
         'sistema_uravneniy' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/oeiIeVCnuts?si=78G0tH9wrVcnO-SK','back' : nazad_7_8},
         'sistema_lin_neravenstv' : {'Шпаргалка' : False, 'видеоурок' :False,'back' : nazad_7_8},
-        'metod_intervalov' :  {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/eZVExkq7Qw4?si=34EppADohUYRIwoZ','back' : nazad_7_8}}
+        'metod_intervalov' :  {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/eZVExkq7Qw4?si=34EppADohUYRIwoZ','back' : nazad_7_8},
+        'modul_uravneniya' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/xfxx849a2Xc?si=fEfPnee9NIiLl2xQ','back' : nazad_7_8},
+        'irrat_uravneniya_neravenstva' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/YZYMrk_A9Js?si=2_ZElnwisoNTIX6I', 'back' : nazad_7_8},
+        'arif_progressiya' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/tMkawjepqZQ?si=8bivI-J0SzO33giT', 'back' : nazad_7_8},
+        'geometry_progressiya' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/ZDIME3uZqts?si=v55ICXH0Cfc2q1nx', 'back' : nazad_7_8},
+        'liney_funksiya' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/XtaLastSBWA?si=78lcsdjPMFohxXjh', 'back' : nazad_7_8},
+        'kvadrat_funksiya' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/LSQKcvOJBXs?si=WY6al8mI5GYHizbC', 'back' : nazad_7_8},
+        'raz_zadach_funksiya' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/9FMmTF0Dja8?si=5SZFzqlcEa0S_bZu', 'back' : nazad_7_8},
+        'stepen_funksiya' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_7_8},
+        'obrat_funksiya' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_7_8},
+        'pokaz_urav_neravenstva' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/Ce9HjJxDNA0?si=s8UfQzYiVesc4M_O', 'back' : nazad_7_8},
+        'log_preobrazovaniya' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/Bq7TuElu7-4?si=nOEdC0T8wJvMK2nB', 'back' : nazad_7_8},
+        'log_urav_neravenstva' : {'Шпаргалка' : False, 'видеоурок' :'https://youtu.be/EfSoPwvUrh0?si=oa_O78aZCnHKt3lC', 'back' : nazad_7_8},
+        'log_funskiya' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_7_8},
+        'osnov_ponyatiya' :{'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'osnov_tokdestva' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'formuli_privedeniya' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'formuli_slojeniya' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'dvoynoy_ugol' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'form_sum_rznost' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'form_proizved' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'form_pol_ugla' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'obr_trigio_funk' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'trigo_uravneniya' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'trigo_nerav' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'trigo_funk' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_9},
+        'roizvod_prost_func' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_10},
+        'proizvod_sloj_func' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_10},
+        'issled_func' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_10},
+        'fiz_mex_func' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_10},
+        'pervob_integral' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_10},
+        'metod_zamen_peremen' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_10},
+        'integ_chasti' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_10},
+        'opred_integral' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_10},
+        'mnojestva' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11},
+        'kombinatorika' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11},
+        'teor_veroyat' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11},
+        'param_lin_urav' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11},
+        'param_kvadrat_urav' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11},
+        'sistema_param_urav' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11},
+        'zadach_chisla' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11},
+        'zadach_dvij' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11},
+        'zadach_sovm_rabota' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11},
+        'zadach_protsent' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11},
+        'zadach_smes' : {'Шпаргалка' : False, 'видеоурок' :False, 'back' : nazad_11}}
+
 
 async def give_documents(theme):
     documents = InlineKeyboardMarkup(row_width=1)

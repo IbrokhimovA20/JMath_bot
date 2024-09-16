@@ -16,14 +16,15 @@ category_subject = InlineKeyboardMarkup(
 category_type = InlineKeyboardMarkup(
 inline_keyboard=[
     [ 
-        InlineKeyboardButton(text='5-6 класс', callback_data='5_6_class'),
-        InlineKeyboardButton(text='7-8 класс', callback_data='7_8_class'),
+        InlineKeyboardButton(text='Арифметика', callback_data='5_6_class'),
+        InlineKeyboardButton(text='Алгебра', callback_data='7_8_class'),
     ],
     [
-        InlineKeyboardButton(text='9-10 класс', callback_data='9_10_class'),
+        InlineKeyboardButton(text='Тригонометрия', callback_data='9_class'),
+        InlineKeyboardButton(text='Алгебра и начала анализа', callback_data='10_class')
     ],
     [
-        InlineKeyboardButton(text='11 класс', callback_data='11_class')
+        InlineKeyboardButton(text='Дополнительные темы', callback_data='11_class')
     ]
 ])
 

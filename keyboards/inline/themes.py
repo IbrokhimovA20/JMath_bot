@@ -17,8 +17,7 @@ from loader import dp
 theme_5_6 = {'Обыкновенные дроби': 'theme_obiknovenniye_drobi',
         'Десятичные дроби':'theme_desyatichniye_drobi',
         'Периодические дроби' : 'theme_period_drobi',
-        'Действия над рациональными числами':'theme_ratsion_chisla',
-        'Степень с рациональным показателем':'theme_stepen_ratsion_chisel'}
+        'Действия над рациональными числами':'theme_ratsion_chisla'}
 
 # theme_6 = {'Бесконечно периодические дроби': 'bes_per_drobi',
 #     'Пропорция':'proportion',
@@ -27,7 +26,8 @@ theme_5_6 = {'Обыкновенные дроби': 'theme_obiknovenniye_drobi',
 #     'Задачи на движение по воде':'dvij_po_vode'}
 
 
-theme_7_8 = {'Одночлены  и многочлены' : 'theme_odno_mnogochlen',
+theme_7_8 = {'Степень с рациональным показателем':'theme_stepen_ratsion_chisel',
+            'Одночлены  и многочлены' : 'theme_odno_mnogochlen',
             'Формулы сокращенного умножения' : 'theme_formula_umnoj',
             'Разложение на множители' : 'theme_razloj_mnojiteli',
             'Алгебраические дроби' : 'theme_algebra_drobi',
@@ -38,7 +38,20 @@ theme_7_8 = {'Одночлены  и многочлены' : 'theme_odno_mnogoch
             'Уравнения высших степеней' : 'theme_urav_vish_step',
             'Система уравнений' : 'theme_sistema_uravneniy',
             'Неравенства + Система неравенств' : 'theme_sistema_lin_neravenstv',
-            'Метод интервалов' : 'theme_metod_intervalov'}
+            'Метод интервалов' : 'theme_metod_intervalov',
+            'Модульные уравнения и неравенства':'theme_modul_uravneniya',
+            'Иррациональные уравнения и неравенства':'theme_irrat_uravneniya_neravenstva',
+            'Арифметическая прогрессия':'theme_arif_progressiya',
+            'Геометрическая прогрессия':'theme_geometry_progressiya',
+            'Линейная функция' : 'theme_liney_funksiya',
+            'Квадратичная функция' : 'theme_kvadrat_funksiya',
+            'Разные задачи на функцию' : 'theme_raz_zadach_funksiya',
+            'Степенные функции' : 'theme_stepen_funksiya',
+            'Обратная функция' : 'theme_obrat_funksiya',
+            'Показательные уравнения и неравенства':'theme_pokaz_urav_neravenstva',
+            'Логарифммические преобразования':'theme_log_preobrazovaniya',
+            'Логарифммические уравнения и неравенства':'theme_log_urav_neravenstva',
+            'Показательная и Логарифмическая функции':'theme_log_funskiya'}
 
 # theme_7 = {'Степень':'stepen',
 #     'Одночлены':'odnochlen',
@@ -62,19 +75,41 @@ theme_7_8 = {'Одночлены  и многочлены' : 'theme_odno_mnogoch
 
 
 
-theme_9_10 = {'Модульные уравнения и неравенства':'modul_uravneniya',
-    'Иррациональные уравнения и неравенства':'irrat_uravneniya_neravenstva',
-    'Арифметическая прогрессия':'arif_progressiya',
-    'Геометрическая прогрессия':'geometry_progressiya',
-    'Линейная функция' : 'liney_funksiya',
-    'Квадратичная функция' : 'kvadrat_funksiya',
-    'Разные задачи на функцию' : 'raz_zadach_funksiya',
-    'Степенные функции' : 'stepen_funksiya',
-    'Обратная функция' : 'obrat_funksiya',
-    'Показательные уравнения и неравенства':'pokaz_urav_neravenstva',
-    'Логарифммические преобразования':'log_preobrazovaniya',
-    'Логарифммические уравнения и неравенства':'log_urav_neravenstva',
-    'Показательная и Логарифмическая функции':'log_funskiya'}
+theme_9 = {'Основные понятия' : 'theme_osnov_ponyatiya',
+           'Основные тождества' : 'theme_osnov_tokdestva',
+           'Формулы приведения' : 'theme_formuli_privedeniya',
+           'Формулы сложения' : 'theme_formuli_slojeniya',
+           'Двойной угол' : 'theme_dvoynoy_ugol',
+           'Формулы для суммы и разности' : 'theme_form_sum_rznost',
+           'Формулы для произведения' : 'theme_form_proizved',
+           'Формулы половинного угла' : 'theme_form_pol_ugla',
+           'Обратно тригонометрические функции' : 'theme_obr_trigio_funk',
+           'Тригонометрические уравнения' : 'theme_trigo_uravneniya',
+           'Тригонометрические неравенства' : 'theme_trigo_nerav',
+           'Тригонометрические функции' : 'theme_trigo_funk'}
+
+theme_10 = {'Производная простой функции, произведения и частного' : 'theme_proizvod_prost_func',
+            'Производная сложной функции' : 'theme_proizvod_sloj_func',
+            'Исследования функции с помощью производной' : 'theme_issled_func',
+            'Физический и механический смысл производной' : 'theme_fiz_mex_func',
+            'Первообразная и Интеграл' : 'theme_pervob_integral',
+            'Метод замены переменных' : 'theme_metod_zamen_peremen',
+            'Интегрирования по частям' : 'theme_integ_chasti',
+            'Определенный интеграл' : 'theme_opred_integral'}
+
+
+theme_11 = {'Множества' : 'theme_mnojestva',
+            'Комбинаторика' : 'theme_kombinatorika',
+            'Теория вероятности' : 'theme_teor_veroyat',
+            'Параметрические линейные уравнения' : 'theme_param_lin_urav',
+            'Параметрические квадратные уравнения' : 'theme_param_kvadrat_urav',
+            'Система параметрических уравнений' : 'theme_sistema_param_urav',
+            'Задачи на числа' : 'theme_zadach_chisla',
+            'Задачи на движения' : 'theme_zadach_dvij',
+            'Задачи на совместную работу' : 'theme_zadach_sovm_rabota',
+            'Задачи на проценты' : 'theme_zadach_protsent',
+            'Задачи на смеси' : 'theme_zadach_smes'}
+
 
 # theme_10 = {'Показательные уравнения и неравенства':'pokaz_urav_neravenstva',
 #     'Показательная функция':'pokaz_funksiya',
@@ -82,16 +117,16 @@ theme_9_10 = {'Модульные уравнения и неравенства':
 #     'Логарифммические уравнения и неравенства':'log_urav_neravenstva',
 #     'Логарифмическая функция':'log_funskiya'}
 
-theme_11 = {'Производная':'proizvodnaya',
-    'Сложная производная':'sloj_prozivodnaya',
-    'Промежутки возрастания функции, точки экстремума':'promejutki_vozrast_ekstremum',
-    'Геометрический смысл производной':'geometry_smisl_proizvod',
-    'Механический смысл производной':'mehanicheskiy_smisl_proizvod',
-    'Первообразная':'pervoobraznaya',
-    'Неопределенный интеграл':'neopredelenniy_integral',
-    'Определенный интеграл, площадь криволинейной трапеции':'opred_integral_trapetsiya',
-    'Метод замены переменных':'metod_zamena_peremenniye',
-    'Интегрирование по частям':'integ_po_chastyam'}
+# theme_11 = {'Производная':'proizvodnaya',
+#     'Сложная производная':'sloj_prozivodnaya',
+#     'Промежутки возрастания функции, точки экстремума':'promejutki_vozrast_ekstremum',
+#     'Геометрический смысл производной':'geometry_smisl_proizvod',
+#     'Механический смысл производной':'mehanicheskiy_smisl_proizvod',
+#     'Первообразная':'pervoobraznaya',
+#     'Неопределенный интеграл':'neopredelenniy_integral',
+#     'Определенный интеграл, площадь криволинейной трапеции':'opred_integral_trapetsiya',
+#     'Метод замены переменных':'metod_zamena_peremenniye',
+#     'Интегрирование по частям':'integ_po_chastyam'}
 
 geometriya_1 = {'Углы и основные понятия геометрии':'ugli',
     'Параллельные прямые':'paralel_pramoy',
@@ -121,7 +156,7 @@ geometriya_4 = {'Пирамида':'piramida',
         'Комбинация тел':'kombinasiya'}
 
 
-all_classes = {'5_6_class' : theme_5_6, '7_8_class' : theme_7_8, '9_10_class' : theme_9, '11_class' : theme_11}
+all_classes = {'5_6_class' : theme_5_6, '7_8_class' : theme_7_8, '9_class' : theme_9,'10_class' : theme_10, '11_class' : theme_11}
 
 nazad = InlineKeyboardButton(text='назад', callback_data='nazad_v_klass')
 
