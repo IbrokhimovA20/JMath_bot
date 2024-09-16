@@ -10,7 +10,11 @@ from keyboards.inline.themes import theme_5_6
 from aiogram.types import CallbackQuery
 
 from loader import dp,bot
-all_teors = {"teor_obiknovenniye_drobi" : ["BQACAgIAAxkBAAKfdGWOxpvhvnTf9HuQSdQxgrFJOEibAAKTOAACbbVpSBF-e-foZX0yNAQ"],
+all_teors = {"teor_obiknovenniye_drobi" : ["BQACAgIAAxkBAAL5qWboHJAw62AmNf1X54ThELD1c6yEAALTTwACvG5BS3JLZqS90aGmNgQ", 
+                                           "BQACAgIAAxkBAAL5q2boHMd9HVJ_fSVPhJknYduywcn3AALYTwACvG5BSzMdfpMrugSxNgQ",
+                                           "BQACAgIAAxkBAAL5rWboHMlftjkAAWcc4xzKTdUjdYOFQQAC2U8AArxuQUuXnPo-NXV-9jYE",
+                                           "BQACAgIAAxkBAAL5r2boHMsnDXpKX4XC8MPskXl2n9y5AALaTwACvG5BS1-OiGE-6QVDNgQ"],
+            # ""
             }
 
 # @dp.callback_query_handler(lesson_callback.filter(item_name = 'teor_obiknovenniye_drobi'))
