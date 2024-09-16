@@ -19,12 +19,12 @@ from .lesson_handlers import geometry_handler_4
 from . import answer_handler
 from . import univer_answers
 from .teor_handler import teor_handler
-from .teor_handler import teor_handler_6_7
-from .teor_handler import teor_handler_7_8
+# from .teor_handler import teor_handler_6_7
+# from .teor_handler import teor_handler_7_8
 from .teor_handler import konspekt_handler_8
-from .teor_handler import konspekt_handler_9
-from .teor_handler import konspekt_handler_10
-from .teor_handler import konspekt_handler_11
+# from .teor_handler import konspekt_handler_9
+# from .teor_handler import konspekt_handler_10
+# from .teor_handler import konspekt_handler_11
 from .teor_handler import konspekt_geometry_1
 from .teor_handler import konspekt_geometry_2
 from .teor_handler import konspekt_geometry_3
