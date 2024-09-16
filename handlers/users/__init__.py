@@ -21,7 +21,7 @@ from . import univer_answers
 from .teor_handler import teor_handler
 # from .teor_handler import teor_handler_6_7
 # from .teor_handler import teor_handler_7_8
-from .teor_handler import konspekt_handler_8
+# from .teor_handler import konspekt_handler_8
 # from .teor_handler import konspekt_handler_9
 # from .teor_handler import konspekt_handler_10
 # from .teor_handler import konspekt_handler_11
