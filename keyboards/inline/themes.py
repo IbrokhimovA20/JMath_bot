@@ -128,32 +128,32 @@ theme_11 = {'Множества' : 'theme_mnojestva',
 #     'Метод замены переменных':'metod_zamena_peremenniye',
 #     'Интегрирование по частям':'integ_po_chastyam'}
 
-geometriya_1 = {'Углы и основные понятия геометрии':'ugli',
-    'Параллельные прямые':'paralel_pramoy',
-    'Треугольники общие понятия':'treugolnik',
-    'Виды треугольников,прямоугольный' : 'vidi_treugolnikov',
-    'Треугольники Теорема синусов,косинусов Р б и Р н треугольники':'sin_kos_tan_cotan',
-    'Высота, биссектрисы и медиана треугольника':'biss_mediana_visota'}
+geometriya_1 = {'Углы и основные понятия геометрии':'theme_geot_ugli',
+    'Параллельные прямые':'theme_geot_paralel_pramoy',
+    'Треугольники общие понятия':'theme_geot_treugolnik',
+    'Виды треугольников,прямоугольный' : 'theme_geot_vidi_treugolnikov',
+    'Треугольники Теорема синусов,косинусов Р б и Р н треугольники':'theme_geot_sin_kos_tan_cotan',
+    'Высота, биссектрисы и медиана треугольника':'theme_geot_biss_mediana_visota'}
 
-geometriya_2 = {'Площадь треугольника':'ploshad_treugolnikov',
-    'Подобие треугольников и средняя линия':'podobiye_treugolnikov',
-    '4_угольники,квадрат,прямоугольник':'kvadrat',
-    'Ромб и параллелограмм':'parallelogram',
-    'Трапеция':'trapetsiya',
-    'Многоугольники':'mnogougolnik'}
+geometriya_2 = {'Площадь треугольника':'theme_geot_ploshad_treugolnikov',
+    'Подобие треугольников и средняя линия':'theme_geot_podobiye_treugolnikov',
+    '4_угольники,квадрат,прямоугольник':'theme_geot_kvadrat',
+    'Ромб и параллелограмм':'theme_geot_parallelogram',
+    'Трапеция':'theme_geot_trapetsiya',
+    'Многоугольники':'theme_geot_mnogougolnik'}
 
-geometriya_3 = {'Окружность и круг':'okrujnost_krug',
-        'Площадь, длина и уравнение окружности':'ploshad',
-        'Окружность + треугольник':'okrujnost_treugolnik',
-        'Окружность + 4-угольник':'okrujnost_chugolnik',
-        'Система координат и векторы':'sistema_koordinat',
-        'Призма':'prizma'}
+geometriya_3 = {'Окружность и круг':'theme_geot_okrujnost_krug',
+        'Площадь, длина и уравнение окружности':'theme_geot_ploshad',
+        'Окружность + треугольник':'theme_geot_okrujnost_treugolnik',
+        'Окружность + 4-угольник':'theme_geot_okrujnost_chugolnik',
+        'Система координат и векторы':'theme_geot_sistema_koordinat',
+        'Призма':'theme_geot_prizma'}
     
-geometriya_4 = {'Пирамида':'piramida',
-    'Цилиндр':'silindr',
-       'Конус':'konus',
-        'Шар и Сфера':'shar_sfera',
-        'Комбинация тел':'kombinasiya'}
+geometriya_4 = {'Пирамида':'theme_geot_piramida',
+    'Цилиндр':'theme_geot_silindr',
+       'Конус':'theme_geot_konus',
+        'Шар и Сфера':'theme_geot_shar_sfera',
+        'Комбинация тел':'theme_geot_kombinasiya'}
 
 
 all_classes = {'5_6_class' : theme_5_6, '7_8_class' : theme_7_8, '9_class' : theme_9,'10_class' : theme_10, '11_class' : theme_11}
@@ -169,6 +169,9 @@ async def give_class_themes(class_theme):
         themes.insert(InlineKeyboardButton(text=key, callback_data = themes_callback.new(item_name=value)))
     themes.insert(nazad)
     return themes
+
+
+# async def give_geot_themes
 
 
 

@@ -228,35 +228,35 @@ async def give_algebra_classes(call : CallbackQuery):
 #         await call.message.answer('Выберите тему', reply_markup = themes_6)
 #         await call.message.delete()
 
-@dp.callback_query_handler(text='7_class')
-async def buy_courses(call: CallbackQuery):
-    if check_google_sheet(call.from_user.id):
-        await call.message.answer('Выберите тему', reply_markup = themes_7)
-        await call.message.delete()
+# @dp.callback_query_handler(text='7_class')
+# async def buy_courses(call: CallbackQuery):
+#     if check_google_sheet(call.from_user.id):
+#         await call.message.answer('Выберите тему', reply_markup = themes_7)
+#         await call.message.delete()
 
-@dp.callback_query_handler(text='8_class')
-async def buy_courses(call: CallbackQuery):
-    if check_google_sheet(call.from_user.id):
-        await call.message.answer('Выберите тему', reply_markup = themes_8)
-        await call.message.delete()
+# @dp.callback_query_handler(text='8_class')
+# async def buy_courses(call: CallbackQuery):
+#     if check_google_sheet(call.from_user.id):
+#         await call.message.answer('Выберите тему', reply_markup = themes_8)
+#         await call.message.delete()
 
-@dp.callback_query_handler(text='9_class')
-async def buy_courses(call: CallbackQuery):
-    if check_google_sheet(call.from_user.id):
-        await call.message.answer('Выберите тему', reply_markup = themes_9)
-        await call.message.delete()
+# @dp.callback_query_handler(text='9_class')
+# async def buy_courses(call: CallbackQuery):
+#     if check_google_sheet(call.from_user.id):
+#         await call.message.answer('Выберите тему', reply_markup = themes_9)
+#         await call.message.delete()
 
-@dp.callback_query_handler(text='10_class')
-async def buy_courses(call: CallbackQuery):
-    if check_google_sheet(call.from_user.id):
-        await call.message.answer('Выберите тему', reply_markup = themes_10)
-        await call.message.delete()
+# @dp.callback_query_handler(text='10_class')
+# async def buy_courses(call: CallbackQuery):
+#     if check_google_sheet(call.from_user.id):
+#         await call.message.answer('Выберите тему', reply_markup = themes_10)
+#         await call.message.delete()
 
-@dp.callback_query_handler(text='11_class')
-async def buy_courses(call: CallbackQuery):
-    if check_google_sheet(call.from_user.id):
-        await call.message.answer('Выберите тему', reply_markup = themes_11)
-        await call.message.delete()
+# @dp.callback_query_handler(text='11_class')
+# async def buy_courses(call: CallbackQuery):
+#     if check_google_sheet(call.from_user.id):
+#         await call.message.answer('Выберите тему', reply_markup = themes_11)
+#         await call.message.delete()
 
 @dp.callback_query_handler(text='nazad_v_klass')
 async def buy_courses(call: CallbackQuery):

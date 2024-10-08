@@ -81,8 +81,34 @@ docs = {'obiknovenniye_drobi' : {'Шпаргалка' : True, 'Примеры' :
         'zadach_smes' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' :False, 'back' : nazad_11}}
 
 
+docs_geot = {'ugli' :  {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_1},
+            'paralel_pramoy' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_1},
+            'treugolnik' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_1},
+            'vidi_treugolnikov' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_1},
+            'sin_kos_tan_cotan' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_1},
+            'biss_mediana_visota' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_1},
+            'ploshad_treugolnikov' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_2},
+            'podobiye_treugolnikov' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_2},
+            'kvadrat' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_2},
+            'parallelogram' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_2},
+            'trapetsiya' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_2},
+            'mnogougolnik' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_2},
+            'okrujnost_krug' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_3},
+            'ploshad' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_3},
+            'okrujnost_treugolnik' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_3},
+            'okrujnost_chugolnik' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_3},
+            'sistema_koordinat' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_3},
+            'prizma' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_3},
+            'piramida' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_4},
+            'silindr' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_4},
+            'konus' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_4},
+            'shar_sfera' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_4},
+            'kombinasiya' : {'Шпаргалка' : False, 'Примеры' : False,'видеоурок' : False,'back' : nazad_geometry_4}}
+
+
+
 async def give_documents(theme):
-    documents = InlineKeyboardMarkup(row_width=1)
+    # documents = InlineKeyboardMarkup(row_width=1)
     inline_keyboard = InlineKeyboardMarkup(row_width=1)
     inline_keyboard.insert(InlineKeyboardButton(text='Теория', callback_data=lesson_callback.new(item_name=f'teor_{theme}')))
     if docs[theme]['Примеры']:
@@ -93,6 +119,21 @@ async def give_documents(theme):
         inline_keyboard.insert(InlineKeyboardButton(text='видеоурок', url=docs[theme]['видеоурок']))
     inline_keyboard.insert(docs[theme]['back'])
     return inline_keyboard
+
+
+async def give_geot_documents(theme):
+    inline_keyboard = InlineKeyboardMarkup(row_width=1)
+    inline_keyboard.insert(InlineKeyboardButton(text='Теория', callback_data=lesson_callback.new(item_name=f'teor_geot_{theme}')))
+    if docs_geot[theme]['Примеры']:
+        inline_keyboard.insert(InlineKeyboardButton(text='Примеры', callback_data=lesson_callback.new(item_name=f'prim_geot_{theme}')))
+    if docs_geot[theme]['Шпаргалка']:
+        inline_keyboard.insert(InlineKeyboardButton(text='Шпаргалка', callback_data=lesson_callback.new(item_name=f'shpar_geot_{theme}')))
+    if docs_geot[theme]['видеоурок']:
+        inline_keyboard.insert(InlineKeyboardButton(text='видеоурок', url=docs_geot[theme]['видеоурок']))
+    inline_keyboard.insert(docs_geot[theme]['back'])
+    return inline_keyboard
+
+
 
 
 
