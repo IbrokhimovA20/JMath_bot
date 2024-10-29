@@ -418,14 +418,12 @@ async def buying_corse(call: CallbackQuery):
 
 @dp.callback_query_handler(lambda call: 'shpar' in call.data)
 async def buying_corse(call: CallbackQuery):
-    print(call.data.split(":"))
     for i in all_teors[call.data.split(":")[1]]:
         await call.message.reply_document(document = i)
     await call.message.delete()
 
 @dp.callback_query_handler(lambda call: 'prim' in call.data)
 async def buying_corse(call: CallbackQuery):
-    print(call.data.split(":"))
     for i in all_teors[call.data.split(":")[1]]:
         await call.message.reply_document(document = i)
     await call.message.delete()
