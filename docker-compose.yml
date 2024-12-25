@@ -5,8 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+    - "1007:1007"
     restart: always
     volumes:
-      - .:/trand-rema
+      - .:/jmath
     command: ["sh", "-c", "chmod +x ./main.sh && ./main.sh"]
     # command: ["python", "jmath.py"]

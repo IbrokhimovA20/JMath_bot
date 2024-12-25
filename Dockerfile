@@ -16,5 +16,5 @@ RUN pip install -r requirements.txt
 
 # CMD ["python", "jmath.py"]
 RUN ["chmod", "+x", "./main.sh"]
-
+EXPOSE 1007
 CMD ["./main.sh"]
