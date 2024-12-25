@@ -223,4 +223,4 @@ def get_time(data: Dict[Any, Any]):
     return {'status':students}, 200
 
 
-uvicorn.run(app, host="0.0.0.0", port=1010)
+uvicorn.run(app, host="0.0.0.0", port=1007)
