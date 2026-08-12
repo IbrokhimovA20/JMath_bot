@@ -11,6 +11,9 @@ lyceum  = ReplyKeyboardMarkup(
             KeyboardButton(text="International House (InterHouse)")
         ],
         [
+            KeyboardButton(text="Лицейские варианты📄")
+        ],
+        [
             KeyboardButton(text="назад")
         ]
     ], 

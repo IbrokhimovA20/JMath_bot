@@ -54,6 +54,7 @@ from . lyceum_years_handler import amity_l_years_handler
 from . lyceum_years_handler import iut_l_years_handler
 from . lyceum_years_handler import wiut_l_years_handler
 from . lyceum_years_handler import bmu_l_years_handler
+from . lyceum_years_handler import lyceum_variants_handler
 from . import class_book_handler
 from . import all_books_programms
 from . import user_question_handler
