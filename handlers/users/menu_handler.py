@@ -3,6 +3,7 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import ContentType
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message
+from aiogram.dispatcher.handler import SkipHandler
 from keyboards.default.main_keyboard import menu
 from keyboards.default.library import library_books
 from keyboards.inline.classes import category_type
@@ -49,6 +50,14 @@ async def see_what(message:Message):
 async def download(message: Message):
     doc_id = message.document.file_id
     await message.answer(f"ID {doc_id}")
+
+@dp.message_handler(content_types=ContentType.TEXT, chat_id = ADMINS)
+async def extract_links(message: Message):
+    links = [f"{message.text[e.offset:e.offset + e.length]} -> {e.url}"
+             for e in (message.entities or []) if e.type == 'text_link']
+    if not links:
+        raise SkipHandler()
+    await message.answer('\n'.join(links))
 
 @dp.message_handler(text='Логические задания🧠', state='*')
 async def send_logical(message: Message, state:FSMContext):

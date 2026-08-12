@@ -25,6 +25,14 @@ inline_keyboard=[
     ],
     [
         InlineKeyboardButton(text='Дополнительные темы', callback_data='11_class')
+    ],
+    [
+        InlineKeyboardButton(text='Алгебра с 0 1.1', url='https://t.me/+7FNDp39bWk4xMjE6'),
+        InlineKeyboardButton(text='Алгебра с 0 1.2', url='https://t.me/+8ZEFcitGxRU4MjZi'),
+    ],
+    [
+        InlineKeyboardButton(text='Алгебра с 0 1.3', url='https://t.me/+JFU8NJbwgQMzMjI6'),
+        InlineKeyboardButton(text='Алгебра с 0 1.4', url='https://t.me/+O102MBMPh5k0Mjdi'),
     ]
 ])
 
