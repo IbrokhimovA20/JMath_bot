@@ -53,7 +53,8 @@ async def download(message: Message):
 
 @dp.message_handler(content_types=ContentType.TEXT, chat_id = ADMINS)
 async def extract_links(message: Message):
-    links = [f"{message.text[e.offset:e.offset + e.length]} -> {e.url}"
+    utf16 = message.text.encode('utf-16-le')
+    links = [f"{utf16[e.offset * 2:(e.offset + e.length) * 2].decode('utf-16-le')} -> {e.url}"
              for e in (message.entities or []) if e.type == 'text_link']
     if not links:
         raise SkipHandler()
