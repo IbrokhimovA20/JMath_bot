@@ -1,6 +1,7 @@
 from cgitb import handler
 import imp
 from . import start
+from . import materials_handler
 from . import menu_handler
 from . import regexhandler
 from . import univers
@@ -58,3 +59,4 @@ from . lyceum_years_handler import lyceum_variants_handler
 from . import class_book_handler
 from . import all_books_programms
 from . import user_question_handler
+from . import file_id_handler
