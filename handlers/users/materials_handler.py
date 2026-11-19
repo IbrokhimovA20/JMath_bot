@@ -1,4 +1,5 @@
 from aiogram.types import CallbackQuery
+from aiogram.utils.exceptions import BadRequest
 from keyboards.inline.konspekts import materials, material_sections
 
 from loader import dp
@@ -14,4 +15,8 @@ async def send_materials(call: CallbackQuery):
     await call.answer()
     await call.message.delete()
     for file_id in materials[theme][section]:
-        await call.message.answer_document(document=file_id)
+        # в материалах могут быть и PDF, и фото: file_id фото не отправляется как документ
+        try:
+            await call.message.answer_document(document=file_id)
+        except BadRequest:
+            await call.message.answer_photo(photo=file_id)
