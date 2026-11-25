@@ -39,25 +39,37 @@ materials = {'obiknovenniye_drobi' : {'Видеоурок' : 'https://youtu.be/G
              'odno_mnogochlen' : {'Видеоурок' : 'https://youtu.be/rN3ETQWegpw?si=Vl6bN6_wx7QkubuC',
                                   'Конспект' : ['BQACAgIAAxkBAAECPL1quj3pv0i1kUWm098NzXHhqYAtqgACEloAAndUeUqPlDXH3dol5j0E'],
                                   'Задания' : ['BQACAgIAAxkBAAECPL9quj34vdoOqTaOgZldEhKSGos4-wACi1wAAs2PQUqdeZc71uqikz0E']},
-             'formula_umnoj' : {'Конспект' : ['BQACAgIAAxkBAAECPMNquj7Ow5fANJ5ZMrzqQ626hwjRogAClVwAAs2PQUpZ5OTIz2zTIz0E'],
+             'formula_umnoj' : {'Видеоурок' : 'https://youtu.be/bi8ixPGWMoI',
+                                'Конспект' :['BQACAgIAAxkBAAECPMNquj7Ow5fANJ5ZMrzqQ626hwjRogAClVwAAs2PQUpZ5OTIz2zTIz0E'],
                                 'Задания' : ['BQACAgIAAxkBAAECPMVquj7TZylOu40yZBLJn0jFD-vU3gACl1wAAs2PQUrxUvBCzlhYaT0E'],
                                 'Шпаргалка' : ['BQACAgIAAxkBAAECPMdquj7XEwSKmyLp_XXEj4pkfeybwQACllwAAs2PQUr-N2iW6ZVLDj0E']},
-             'razloj_mnojiteli' : {'Конспект' : ['BQACAgIAAxkBAAECPMtquj-7OERI9moQl6n19VyyUZBjlgACE1oAAndUeUpIj9kyGA3nTD0E'],
+             'razloj_mnojiteli' : {'Видеоурок' : 'https://youtu.be/7K33k-DP5sY',
+                                   'Конспект' :['BQACAgIAAxkBAAECPMtquj-7OERI9moQl6n19VyyUZBjlgACE1oAAndUeUpIj9kyGA3nTD0E'],
                                    'Задания' : ['BQACAgIAAxkBAAECPM1quj_Fv7qZcbylBqWtnaiUF8iIWgACm1wAAs2PQUrfibUpc0yMqz0E']},
-             'algebra_drobi' : {'Конспект' : ['BQACAgIAAxkBAAECPNFqukA3qa6aKpgdE-WluybLcrGUYQACGFoAAndUeUo83hbApwt-qz0E'],
+             'algebra_drobi' : {'Видеоурок' : 'https://youtu.be/Afm5qbC3owg',
+                                'Конспект' :['BQACAgIAAxkBAAECPNFqukA3qa6aKpgdE-WluybLcrGUYQACGFoAAndUeUo83hbApwt-qz0E'],
                                 'Задания' : ['BQACAgIAAxkBAAECPNlqukSxKg7aJ27NoOa11h7tcEuHWAACo1wAAs2PQUqURRFAfbBstz0E']},
              'arif_koren' : {'Видеоурок' : 'https://youtu.be/6AC2Chg7j48?si=wKpSI79RkrqGcgfg',
                              'Конспект' : ['BQACAgIAAxkBAAECPN1qukTXmxxkHQFIHdrBZqQ-B3T18gACpVwAAs2PQUqWmI2n6s27KD0E'],
                              'Задания' : ['BQACAgIAAxkBAAECPN9qukTbGQQ-HrThuFa8WtZM2SHlEgACplwAAs2PQUrvjRAtij3uVD0E'],
                              'Шпаргалка' : ['BQACAgIAAxkBAAECPOFqukTfNhL6w4WnvAYhudCq1I0uLQACqFwAAs2PQUqKlgz5W1sRtD0E']},
-             'lin_uravneniya' : {'Конспект' : ['BQACAgIAAxkBAAECPOVqukUPI7StQFlgorFfqPelhs_-0QACgE0AAs2PSUoMS7vhDm9faD0E']},
-             'kvadrad_uravneniya' : {'Конспект' : ['BQACAgIAAxkBAAECPOxqukYFXWCb6xE-ofgN9Y229_7SuwACgU0AAs2PSUrEJroK720LOj0E'],
+             'lin_uravneniya' : {'Видеоурок' : 'https://youtu.be/5NSM3CYOYkg',
+                                 'Конспект' : ['BQACAgIAAxkBAAECPOVqukUPI7StQFlgorFfqPelhs_-0QACgE0AAs2PSUoMS7vhDm9faD0E'],
+                                 'Задания' : ['BQACAgIAAxkBAAECTtNq_oVRddBv2JdSpyFkA40EGfRo6wACdYoAAoQ2CUo2jS_hK9smqj0E']},
+             'kvadrad_uravneniya' : {'Видеоурок' : ['https://youtu.be/Pxgs0bcRVMk?si=jiOHnNvnI4lP0dEe',
+                                                    'https://youtu.be/lNRQD2ZM_w0?si=qW4vsgRLHYZxiyEL',
+                                                    'https://youtu.be/ttrnNyYy12A?si=L0uFyY6ABi9xSsRX'],
+                                     'Конспект' :['BQACAgIAAxkBAAECPOxqukYFXWCb6xE-ofgN9Y229_7SuwACgU0AAs2PSUrEJroK720LOj0E'],
                                      'Задания' : ['BQACAgIAAxkBAAECPO5qukYIMHUMHZo_9MYUbaimCLeGNAACgk0AAs2PSUpBRhAMV6lPPz0E']},
-             'teorema_vieta' : {'Конспект' : ['BQACAgIAAxkBAAECPPJqukY6KzaMl-MaFDEVu5GXHzL7OgAChU0AAs2PSUo7o5eb-jUpxz0E'],
+             'teorema_vieta' : {'Видеоурок' : 'https://youtu.be/D8iQ5n_dMf8',
+                                'Конспект' :['BQACAgIAAxkBAAECPPJqukY6KzaMl-MaFDEVu5GXHzL7OgAChU0AAs2PSUo7o5eb-jUpxz0E'],
                                 'Задания' : ['BQACAgIAAxkBAAECPPRqukY_yAFhWf1umjl-3qUX9AY5wAAChk0AAs2PSUpkZSIndzBQYD0E']},
-             'urav_vish_step' : {'Конспект' : ['BQACAgIAAxkBAAECPPhqukZawsCqUeHLf8gbqacP-Z3ekwACj00AAs2PSUptpNgkz088cj0E'],
+             'urav_vish_step' : {'Видеоурок' : 'https://youtu.be/p3_49D_7rfY',
+                                 'Конспект' :['BQACAgIAAxkBAAECPPhqukZawsCqUeHLf8gbqacP-Z3ekwACj00AAs2PSUptpNgkz088cj0E'],
                                  'Задания' : ['BQACAgIAAxkBAAECPPpqukZd8C08Bj891DlmRZ1bfqPNmwACkU0AAs2PSUray1QKZ9ah6j0E']},
-             'sistema_lin_neravenstv' : {'Конспект' : ['BQACAgIAAxkBAAECPP5qukpyI8Suvp2fEDo9FUSLuiJFQQACFlAAAihNqUqhYtFjv39vCz0E'],
+             # видео общее с "Методом интервалов"
+             'sistema_lin_neravenstv' : {'Видеоурок' : 'https://www.youtube.com/watch?v=eZVExkq7Qw4',
+                                         'Конспект' :['BQACAgIAAxkBAAECPP5qukpyI8Suvp2fEDo9FUSLuiJFQQACFlAAAihNqUqhYtFjv39vCz0E'],
                                          'Задания' : ['BQACAgIAAxkBAAECPQABarpKlNVvIdypQ21xFNOmh3cxKmEAAvdNAALNj0lKwsZjEgPQP4g9BA']},
              'metod_intervalov' : {'Видеоурок' : 'https://youtu.be/eZVExkq7Qw4?si=34EppADohUYRIwoZ',
                                    'Конспект' : ['BQACAgIAAxkBAAECPQpquk0u4hC3zd8R0ZFpBFDAc0C7bQAC-E0AAs2PSUpESSQi5gstKz0E'],
@@ -81,15 +93,23 @@ materials = {'obiknovenniye_drobi' : {'Видеоурок' : 'https://youtu.be/G
                                        'Конспект' : ['BQACAgIAAxkBAAECPSpqupEn_GP-ora-2UeD9W5XWq8xJgACwFEAAs2PSUpxIUk5PFl_bD0E'],
                                        'Задания' : ['BQACAgIAAxkBAAECPSxqupEspKt-oaMCLe3yEuGAcCYHowACtlIAAs2PSUqZfGZOcwgGID0E']},
              'liney_funksiya' : {'Видеоурок' : 'https://youtu.be/XtaLastSBWA?si=78lcsdjPMFohxXjh',
-                                 'Конспект' : ['BQACAgIAAxkBAAECPTBqupHTpvYril3OhsDZf52wFbY8jAACuVIAAs2PSUpD-62orDunXT0E']},
+                                 'Конспект' : ['BQACAgIAAxkBAAECPTBqupHTpvYril3OhsDZf52wFbY8jAACuVIAAs2PSUpD-62orDunXT0E'],
+                                 'Задания' : ['BQACAgIAAxkBAAECTuNq_ofJkaslNSoBL4zaTFy6Io-uaAACzlIAAorayErMX7GHzx70nj0E',
+                                              'BQACAgIAAxkBAAECTuRq_ofJGKRMI8IbyeohXUC33nMEggACz1IAAorayEocJhdFuuovjD0E',
+                                              'BQACAgIAAxkBAAECTuVq_ofJTeaejrLQj6uwYcdU-wABWTAAAtBSAAKK2shKT2lw4q4abFE9BA',
+                                              'BQACAgIAAxkBAAECTuZq_ofJkLqRb5rmlrlxAQtcSFsQ9AAC0VIAAorayEqhxDwTja2TGj0E']},
              'kvadrat_funksiya' : {'Видеоурок' : 'https://youtu.be/LSQKcvOJBXs?si=WY6al8mI5GYHizbC',
                                    'Конспект' : ['BQACAgIAAxkBAAECPTRqupIPstiP_fuJtnjZbcmBo_nU3wACc1cAAtiOYEp7W8EcFxaw6T0E'],
                                    'Задания' : ['BQACAgIAAxkBAAECPTZqupIXPkwNbkaG-5vmqXIr-t-04QACP1AAAihNqUoy95kJ8oUhQD0E']},
              'raz_zadach_funksiya' : {'Видеоурок' : 'https://youtu.be/9FMmTF0Dja8?si=5SZFzqlcEa0S_bZu',
-                                      'Конспект' : ['BQACAgIAAxkBAAECPTxqupJlVAVH2mUVHz5XQFvcn8oAAY0AAnxXAALYjmBKJOsdPf9IBuY9BA']},
-             'stepen_funksiya' : {'Конспект' : ['BQACAgIAAxkBAAECPUBqupKIMSrn0_7cJKSE3xUvQzypaAACflcAAtiOYErahsjy7b1qHT0E'],
+                                      'Конспект' : ['BQACAgIAAxkBAAECPTxqupJlVAVH2mUVHz5XQFvcn8oAAY0AAnxXAALYjmBKJOsdPf9IBuY9BA'],
+                                      'Задания' : ['BQACAgIAAxkBAAECTvBq_pBuMz6GeXEyRi20QfjfCdb0MAACY5AAAjYwCEvcpEumvLp0oT0E']},
+             'stepen_funksiya' : {'Видеоурок' : 'https://youtu.be/_lW5pgemT1w',
+                                  'Конспект' :['BQACAgIAAxkBAAECPUBqupKIMSrn0_7cJKSE3xUvQzypaAACflcAAtiOYErahsjy7b1qHT0E'],
                                   'Задания' : ['BQACAgIAAxkBAAECPUFqupKPqtc9OO0mphj-UNB3gaJWHwACf1cAAtiOYEoNBv9dk0BKYT0E']},
-             'obrat_funksiya' : {'Конспект' : ['BQACAgIAAxkBAAECPUpqupMidrTWdA7e1Nqdce8AAblKQCEAAoBXAALYjmBK6W_Ixwp7wJ49BA']},
+             'obrat_funksiya' : {'Видеоурок' : 'https://youtu.be/IODsG0JtEEk',
+                                 'Конспект' : ['BQACAgIAAxkBAAECPUpqupMidrTWdA7e1Nqdce8AAblKQCEAAoBXAALYjmBK6W_Ixwp7wJ49BA'],
+                                 'Задания' : ['BQACAgIAAxkBAAECTwABav7rDa1TNQABw365yWyUlgedhxRYAAJxkAACNjAISwXVU7B4Jlq1PQQ']},
              'pokaz_urav_neravenstva' : {'Видеоурок' : 'https://youtu.be/Ce9HjJxDNA0?si=s8UfQzYiVesc4M_O',
                                          'Конспект' : ['BQACAgIAAxkBAAECPU5qupPaUjEMH30zTHRdhfqG4ua4SAACC1gAAtiOYEpdpY3KL6Dr-D0E',
                                                        'BQACAgIAAxkBAAECPVBqupPgrmstQq9J2FNSXQpIRMQQIgACDFgAAtiOYEpsjfAuLW5jqT0E'],
@@ -104,8 +124,10 @@ materials = {'obiknovenniye_drobi' : {'Видеоурок' : 'https://youtu.be/G
                                                     'BQACAgIAAxkBAAECPWJqupYqXSqWIwW_lRmp21XntbevmAACSFgAAtiOYEqq_ew2xYl8zz0E']},
              'log_funskiya' : {'Конспект' : ['BQACAgIAAxkBAAECPWZqupaqsygFDncwe1e08ZOwEHl4-AACV1gAAtiOYEpfYhhwkC7w-T0E',
                                              'BQACAgIAAxkBAAECPWdqupau_LLz8uRxejx4wfLU_tF7KQACTFgAAtiOYEo0Z_o2cWk7vj0E']},
-             'osnov_ponyatiya' : {'Конспект' : ['BQACAgIAAxkBAAECPXJqupgNYbbcSEdhjVlvW5Ro2bi9cwACTlwAAndUeUp-c-O8E1z58j0E'],
-                                  'Задания' : ['BQACAgIAAxkBAAECPXRqupgRIK2WfJEiNAWBreP-9_J9YgACT1wAAndUeUpq-RdGOkLNLz0E']},
+             'osnov_ponyatiya' : {'Видеоурок' : 'https://youtu.be/E2PhDzozmG0',
+                                  'Конспект' : ['BQACAgIAAxkBAAECTwJq_u-utnK4hB4wYKeiuvMsu0K_MQACXFsAAsUJ0UpYfutvWoRUoD0E'],
+                                  'Задания' : ['BQACAgIAAxkBAAECTwRq_u--Y3D4DaQ-vxVIRK4a67_F4gACXVsAAsUJ0UrJ2PuJLk8l8j0E',
+                                               'BQACAgIAAxkBAAECTwZq_u_CDy5x1hZ2Iv_RPuUzBVnxRgACZVsAAsUJ0UqTzvCIKNOvND0E']},
              'osnov_tokdestva' : {'Конспект' : ['BQACAgIAAxkBAAECPXhquphA1qcCze9cvNnHhwgIqERWsgACU1wAAndUeUoeetqtYOCX7z0E'],
                                   'Задания' : ['BQACAgIAAxkBAAECPXpquphD4qbEIFznwBi_bOsyOBIPqwACVFwAAndUeUpKCy6pWtYlAAE9BA']},
              'formuli_privedeniya' : {'Конспект' : ['BQACAgIAAxkBAAECPX5qupiKmufwSXACj1s1St-NhxW5DAACWVwAAndUeUqM229cX32nfz0E'],
@@ -157,7 +179,17 @@ materials = {'obiknovenniye_drobi' : {'Видеоурок' : 'https://youtu.be/G
              'zadach_dvij' : {'Конспект' : ['BQACAgIAAxkBAAECPgxqup03WVoddWrbF5R_slutmS9v8gAClE8AAihNqUpkEIjmsyr1YT0E']},
              'zadach_sovm_rabota' : {'Конспект' : ['BQACAgIAAxkBAAECPhBqup1K2lDchJjFaxrnGW1ZDUwcpwAClk8AAihNqUoJiJN9jQ8r1T0E']},
              'zadach_protsent' : {'Конспект' : ['BQACAgIAAxkBAAECPhRqup1fNiyg8Eas31cjfB90TYQZiQACmE8AAihNqUqK9OK3WOKrtj0E']},
-             'zadach_smes' : {'Конспект' : ['BQACAgIAAxkBAAECPhhqup1xhhFGK-4oTlkUNFN9FzyyRwACmU8AAihNqUo8Ihmho1eIeD0E']}}
+             'zadach_smes' : {'Конспект' : ['BQACAgIAAxkBAAECPhhqup1xhhFGK-4oTlkUNFN9FzyyRwACmU8AAihNqUo8Ihmho1eIeD0E']},
+             # конспект: 2 фото по линейным системам, затем 3 фото по нелинейным
+             'sistema_uravneniy' : {'Конспект' : ['AgACAgIAAxkBAAECTsRq_oG83Dy0o3KRy_cFaAKPkKUklQACrRxrGwH98UtUZTJ5BKWPdAEAAwIAA3kAAz0E',
+                                                  'AgACAgIAAxkBAAECTsZq_oHA4H4bRplaGpeI8cgsjPhWvgACrhxrGwH98Uvuz0BPSLAanwEAAwIAA3kAAz0E',
+                                                  'AgACAgIAAxkBAAECTslq_oNw2IkEsH7LedTCQIJXiyXVhQACydkxG4rawEpXtnHbBqJBRwEAAwIAA3kAAz0E',
+                                                  'AgACAgIAAxkBAAECTs5q_oN6zVfWtmwok0ICkteQ_F06_AACshxrGwH98UubHRd3xEVhmAEAAwIAA3kAAz0E',
+                                                  'AgACAgIAAxkBAAECTtBq_oN-7Jt5mc5CImT-siG_wYMH3QACsxxrGwH98Uu-mpNn9eZXQgEAAwIAA3kAAz0E'],
+                                    # задания: 3 фото по линейным системам
+                                    'Задания' : ['AgACAgIAAxkBAAECTtlq_oYy6zCuvN8zIL7WjhiDcZ067gACzNkxG4rawEo05OZ8UxnFmAEAAwIAA3kAAz0E',
+                                                 'AgACAgIAAxkBAAECTt5q_oZBpWrNsewkT9l2d0g0FBhpUQACtRxrGwH98UtsJ2dTG4Kl1AEAAwIAA3kAAz0E',
+                                                 'AgACAgIAAxkBAAECTuBq_oZEKEtuOHxo-1RCTt5DW9JYRAACthxrGwH98UvIqY37_vD0kAEAAwIAA3kAAz0E']}}
 
 # Раздел -> код в callback_data
 material_sections = {'Конспект' : 'kons', 'Задания' : 'zad', 'Шпаргалка' : 'shp'}
@@ -259,7 +291,11 @@ async def give_documents(theme):
     inline_keyboard = InlineKeyboardMarkup(row_width=1)
     if theme in materials:
         video = materials[theme].get('Видеоурок') or docs[theme]['видеоурок']
-        if video:
+        # видео может быть одно (строка) или несколько частей (список)
+        if isinstance(video, list):
+            for number, url in enumerate(video, 1):
+                inline_keyboard.insert(InlineKeyboardButton(text=f"{material_labels['Видеоурок']} {number}", url=url))
+        elif video:
             inline_keyboard.insert(InlineKeyboardButton(text=material_labels['Видеоурок'], url=video))
         for name, code in material_sections.items():
             if materials[theme].get(name):
